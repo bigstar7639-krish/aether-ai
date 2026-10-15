@@ -1,158 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SCARLET AI - All Movies Direct Link AI</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#050000;color:#fff;font-family:'Inter',sans-serif}
-.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(130% at 15% 0%,#DC143C 0%,#000 75%)}
-.top{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;background:rgba(10,0,0,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #DC143C40;display:flex;align-items:center;justify-content:space-between;padding:0 14px}
-.logo{font-family:'Cinzel';font-weight:900;letter-spacing:3px;font-size:16px}
-.logo b{color:#DC143C}
-.search{max-width:750px;margin:80px auto 0;padding:0 16px}
-.sbox{background:#140000;border:1px solid #DC143C50;border-radius:20px;padding:8px 8px 8px 18px;display:flex;gap:10px;align-items:center;box-shadow:0 0 30px rgba(220,20,60,0.15)}
-.sbox input{flex:1;background:transparent;border:none;color:#fff;outline:none;font-size:15px}
-.sbox button{height:44px;padding:0 22px;background:linear-gradient(135deg,#DC143C,#8B0000);border:none;border-radius:14px;color:#fff;font-weight:800;cursor:pointer}
-.chips{max-width:750px;margin:14px auto 0;padding:0 16px;display:flex;gap:8px;overflow-x:auto}
-.chip{padding:8px 16px;border-radius:100px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.08);font-size:12px;font-weight:600;white-space:nowrap;cursor:pointer}
-.chip.active{background:#DC143C;border-color:#DC143C}
-.chat{max-width:750px;margin:16px auto;padding:0 16px}
-.msg{background:rgba(20,0,0,0.85);border:1px solid #DC143C30;border-radius:18px;padding:16px;margin-bottom:12px;font-size:14px;line-height:1.7;white-space:pre-wrap}
-.link{display:inline-block;margin:6px 6px 0 0;padding:10px 16px;border-radius:12px;font-size:12px;font-weight:800;text-decoration:none;color:#fff;border:1px solid #333;cursor:pointer}
-.link.r{background:#DC143C;border-color:#DC143C}
-.link.dl{background:#00FF88;color:#000;border-color:#00FF88;animation:pulse 1.5s infinite}
-.link.p{background:#00A8E1}
-.link.n{background:#E50914}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.grid{max-width:1100px;margin:20px auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;padding:0 16px}
-.card{background:rgba(20,0,0,0.85);border:1px solid rgba(220,20,60,0.2);border-radius:18px;overflow:hidden;cursor:pointer;transition:0.2s}
-.card:hover{transform:translateY(-4px);border-color:#DC143C;box-shadow:0 12px 30px rgba(220,20,60,0.3)}
-.card img{width:100%;height:230px;object-fit:cover;background:#000}
-.card-b{padding:10px}
-.card-t{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card-y{font-size:11px;opacity:0.5;margin-top:2px}
-.wait{position:fixed;inset:0;z-index:200;background:#000;display:grid;place-items:center;transition:0.6s}
-.wait.hide{opacity:0;pointer-events:none}
-</style>
-</head>
-<body>
-<div class="bg"></div>
-<div class="wait" id="wait"><div style="text-align:center"><div style="font-family:'Cinzel';font-size:34px;font-weight:900;letter-spacing:4px">SCARLET <b style="color:#DC143C">AI</b></div><div style="font-size:10px;letter-spacing:4px;opacity:0.5;margin-top:6px">ALL MOVIES • DIRECT LINK • WAIT PANNU DA</div><div style="width:200px;height:3px;background:rgba(255,255,255,0.1);border-radius:100px;overflow:hidden;margin:20px auto 0;position:relative"><div style="position:absolute;left:0;top:0;bottom:0;width:50%;background:#DC143C;animation:slide 1s infinite"></div></div><div id="waitTxt" style="margin-top:16px;font-size:13px">Wait pannu da Hari... Scarlet AI loading...</div></div></div>
-<style>@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}</style>
-
-<div class="top">
-<div class="logo">SCARLET <b>AI</b></div>
-<div style="font-size:10px;opacity:0.5;letter-spacing:1px">ELLA VENNA • ALL IN ONE • DIRECT LINK AI</div>
-</div>
-
-<div class="search">
-<div class="sbox">
-<input id="q" placeholder="Movie name type pannu da... Leo, Jailer, Avengers, Charlie Chaplin">
-<button onclick="search()">🔍 SEARCH</button>
-</div>
-</div>
-<div class="chips">
-<div class="chip active" onclick="chip(this,'all')">🔥 All</div>
-<div class="chip" onclick="chip(this,'tamil')">🌶️ Tamil Latest</div>
-<div class="chip" onclick="chip(this,'free')">💾 Free Direct Download</div>
-<div class="chip" onclick="chip(this,'hollywood')">🎬 Hollywood</div>
-</div>
-
-<div class="chat" id="chat">
-<div class="msg"><b>SCARLET AI:</b> Vanakkam da Hari! ELLA VENNA ready da! 🔥🎬
-
-**IPPO ENNA IRUKKU:**
-
-🔥 **Tamil Latest Movies (Leo, Jailer, etc):**
-→ Legal OTT Direct Links - Prime Video, Netflix, Hotstar, Trailer - Click panna direct movie page!
-
-💾 **Free Public Domain Movies (Charlie Chaplin, etc):**
-→ REAL DIRECT DOWNLOAD LINK -.mp4 file - Click panna direct download start aagum!
-
-**Example type pannu:**
-`Leo` → OTT direct links
-`Charlie Chaplin` → Real direct download link + OTT links
-`Avengers` → OTT direct links
-
-Movie name type pannu da - Scarlet AI direct link send pannum! 🚀
-</div>
-</div>
-
-<div class="grid" id="grid"></div>
-
-<script>
-const waitMsgs=["Wait pannu da Hari... Scarlet AI loading...","Ella venna feature load aaguthu da...","Tamil Rockers style + Legal OTT + Free DL ready aaguthu...","Direct link sending AI connect pannuren...","Ready da Hari! Ella venna ready! 🔥"];
-let wi=0;
-const wI=setInterval(()=>{ if(wi<waitMsgs.length-1){ wi++; document.getElementById('waitTxt').innerText=waitMsgs[wi]; }else{ clearInterval(wI); setTimeout(()=>document.getElementById('wait').classList.add('hide'),600); } },700);
-
-// SAMPLE + FREE MOVIES WITH REAL DIRECT DOWNLOAD (ARCHIVE.ORG - LEGAL)
-const movies=[
- {t:"Leo",y:"2023",type:"paid",img:"https://via.placeholder.com/300x450/DC143C/FFFFFF?text=LEO"},
- {t:"Jailer",y:"2023",type:"paid",img:"https://via.placeholder.com/300x450/000000/FFFFFF?text=JAILER"},
- {t:"Charlie Chaplin - The Kid",y:"1921",type:"free",img:"https://via.placeholder.com/300x450/222222/FFFFFF?text=CHARLIE+CHAPLIN",dl:"https://archive.org/download/TheKid1921/TheKid1921_512kb.mp4"},
- {t:"Avengers Endgame",y:"2019",type:"paid",img:"https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"},
- {t:"Night of the Living Dead",y:"1968",type:"free",img:"https://via.placeholder.com/300x450/8B0000/FFFFFF?text=NIGHT+OF+LIVING+DEAD",dl:"https://archive.org/download/night_of_the_living_dead/night_of_the_living_dead_512kb.mp4"},
- {t:"KGF 2",y:"2022",type:"paid",img:"https://via.placeholder.com/300x450/FFD700/000000?text=KGF2"},
- {t:"Charade",y:"1963",type:"free",img:"https://via.placeholder.com/300x450/000000/FFFFFF?text=CHARADE",dl:"https://archive.org/download/Charade1963/Charade1963_512kb.mp4"},
- {t:"Master",y:"2021",type:"paid",img:"https://via.placeholder.com/300x450/DC143C/FFFFFF?text=MASTER"},
+const animes=[
+{t:"Demon Slayer",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/1286/99889.jpg",yt:"https://www.youtube.com/embed/VQGCKyvzIM4",ott:"https://www.jiohotstar.com/search?q=Demon%20Slayer%20Tamil"},
+{t:"Jujutsu Kaisen S1 & S2",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/1792/138022.jpg",yt:"https://www.youtube.com/embed/pkKu9hLT-t8",ott:"https://www.jiohotstar.com/search?q=Jujutsu%20Kaisen%20Tamil"},
+{t:"Naruto Shippuden",y:"Tamil Dub • 500 Ep",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/5/17407.jpg",yt:"https://www.youtube.com/embed/QczGoCmX-pI",ott:"https://www.crunchyroll.com/search?q=Naruto%20Tamil"},
+{t:"One Piece Egghead",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/6/73245.jpg",yt:"https://www.youtube.com/embed/S8_YwFLCh4U",ott:"https://www.crunchyroll.com/search?q=One%20Piece%20Tamil"},
+{t:"Attack on Titan Full",y:"Tamil Dub • S1-S4 Final",cat:"tamil popular",img:"https://cdn.myanimelist.net/images/anime/10/47347.jpg",yt:"https://www.youtube.com/embed/MGRm4IzK1SQ",ott:"https://www.crunchyroll.com/search?q=Attack%20on%20Titan%20Tamil"},
+{t:"My Hero Academia S1-8",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/10/78745.jpg",yt:"https://www.youtube.com/embed/D2kyhD1Gry4",ott:"https://www.jiohotstar.com/search?q=My%20Hero%20Academia%20Tamil"},
+{t:"Haikyu All Seasons",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/7/76014.jpg",yt:"https://www.youtube.com/embed/6X8kZCzF3zI",ott:"https://www.jiohotstar.com/search?q=Haikyu%20Tamil"},
+{t:"Death Note",y:"Tamil Dub • Crunchyroll",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/9/9453.jpg",yt:"https://www.youtube.com/embed/NlJZ-YgAt-c",ott:"https://www.crunchyroll.com/search?q=Death%20Note%20Tamil"},
+{t:"Solo Leveling",y:"Tamil Dub • 2025 Hit",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/1925/140553.jpg",yt:"https://www.youtube.com/embed/c4LLv5o0JcA",ott:"https://www.crunchyroll.com/search?q=Solo%20Leveling%20Tamil"},
+{t:"Blue Lock S1 & S2",y:"Tamil Dub • Crunchyroll",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/3/102320.jpg",yt:"https://www.youtube.com/embed/o2rY9H0h2YQ",ott:"https://www.crunchyroll.com/search?q=Blue%20Lock%20Tamil"},
+{t:"One Punch Man S3",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/12/76049.jpg",yt:"https://www.youtube.com/embed/2JAElThbKrM",ott:"https://www.crunchyroll.com/search?q=One%20Punch%20Man%20Tamil"},
+{t:"Dr Stone Final",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/3/85639.jpg",yt:"https://www.youtube.com/embed/5i4vY9X0Z0I",ott:"https://www.crunchyroll.com/search?q=Dr%20Stone%20Tamil"},
+{t:"Fire Force Final",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/5/87048.jpg",yt:"https://www.youtube.com/embed/MJv6N8Zf0Q0",ott:"https://www.crunchyroll.com/search?q=Fire%20Force%20Tamil"},
+{t:"Frieren S2",y:"Tamil Dub • 2026",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/1015/138006.jpg",yt:"https://www.youtube.com/embed/Iwr1aLEDpe4",ott:"https://www.crunchyroll.com/search?q=Frieren%20Tamil"},
+{t:"Black Clover",y:"Tamil Dub",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/2/88336.jpg",yt:"https://www.youtube.com/embed/x6Y1T2vZCTI",ott:"https://www.crunchyroll.com/search?q=Black%20Clover%20Tamil"},
+{t:"Bleach",y:"Tamil Dub",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/3/40451.jpg",yt:"https://www.youtube.com/embed/78WIYzX_m98",ott:"https://www.crunchyroll.com/search?q=Bleach%20Tamil"},
+{t:"Kaiju No 8",y:"Tamil Dub • 2025",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/4/138005.jpg",yt:"https://www.youtube.com/embed/6B9X0I0Z0I0",ott:"https://www.crunchyroll.com/search?q=Kaiju%20No%208%20Tamil"},
+{t:"Dandadan",y:"Tamil Dub • 2025 Hit",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/3/147731.jpg",yt:"https://www.youtube.com/embed/a4s2N5I0Z0I",ott:"https://www.crunchyroll.com/search?q=Dandadan%20Tamil"},
 ];
-
-function render(list){
- const g=document.getElementById('grid'); g.innerHTML='';
- list.forEach(m=>{
-  const badge=m.type==='free'?'<div style="position:absolute;top:8px;left:8px;background:#00FF88;color:#000;font-size:9px;font-weight:900;padding:4px 8px;border-radius:100px">FREE DL</div>':'';
-  g.innerHTML+=`<div class="card" onclick="send('${m.t}')" style="position:relative">${badge}<img src="${m.img}" onerror="this.src='https://via.placeholder.com/300x450/111111/FFFFFF?text=${encodeURIComponent(m.t)}'"><div class="card-b"><div class="card-t">${m.t}</div><div class="card-y">${m.y} • ${m.type==='free'?'Free Direct Download':'HD • OTT'}</div></div></div>`;
- });
-}
-render(movies);
-
-function chip(el,cat){
- document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active')); el.classList.add('active');
- if(cat==='all') render(movies);
- else if(cat==='free') render(movies.filter(m=>m.type==='free'));
- else if(cat==='tamil') render(movies.filter(m=>['Leo','Jailer','Master'].includes(m.t)||m.type==='paid').slice(0,4));
- else render(movies.slice(0,4));
-}
-
-function search(){
- const q=document.getElementById('q').value.trim();
- if(!q) return alert('Movie name type pannu da Hari!');
- send(q);
-}
-
-function send(name){
- const c=document.getElementById('chat');
- const yt=`https://www.youtube.com/results?search_query=${encodeURIComponent(name+" official trailer")}`;
- const prime=`https://www.primevideo.com/search/ref=atv_sr_sug?phrase=${encodeURIComponent(name)}`;
- const net=`https://www.netflix.com/search?q=${encodeURIComponent(name)}`;
- const hot=`https://www.hotstar.com/in/search?q=${encodeURIComponent(name)}`;
- const google=`https://www.google.com/search?q=${encodeURIComponent(name+" where to watch ott")}`;
-
- // CHECK IF FREE MOVIE
- const freeMovie=movies.find(m=>m.t.toLowerCase().includes(name.toLowerCase())&&m.type==='free')||movies.find(m=>name.toLowerCase().includes('chaplin')||name.toLowerCase().includes('living dead')||name.toLowerCase().includes('charade'));
-
- let dlSection='';
- if(freeMovie&&freeMovie.dl){
-  dlSection=`<br><br>💾 <b>REAL DIRECT DOWNLOAD (LEGAL - PUBLIC DOMAIN):</b><br><a class="link dl" href="${freeMovie.dl}" target="_blank" download>⬇️ DIRECT DOWNLOAD - ${freeMovie.t} -.mp4</a><br><span style="font-size:11px;opacity:0.6">Archive.org - 100% Legal Free Movie - No Piracy!</span>`;
- }else if(name.toLowerCase().includes('chaplin')||name.toLowerCase().includes('charlie')){
-  dlSection=`<br><br>💾 <b>REAL DIRECT DOWNLOAD:</b><br><a class="link dl" href="https://archive.org/download/TheKid1921/TheKid1921_512kb.mp4" target="_blank">⬇️ Charlie Chaplin - The Kid - Direct DL</a>`;
- }else{
-  dlSection=`<br><br>⚠️ <b>${name}</b> paid movie da - Real direct download link illegal! OTT la paaru da! Free public domain movies ku mattum direct download kudukkalam!`;
- }
-
- c.innerHTML+=`<div class="msg"><b>YOU:</b> ${name} direct link kudu da<br><br><b>SCARLET AI - ELLA VENNA DIRECT LINKS:</b><br>🎬 ${name}<br><br>
- <a class="link r" href="${yt}" target="_blank">▶️ Trailer - YouTube</a>
- <a class="link p" href="${prime}" target="_blank">📺 Prime Video</a>
- <a class="link n" href="${net}" target="_blank">🎬 Netflix</a>
- <a class="link" href="${hot}" target="_blank">⭐ Hotstar</a>
- <a class="link" href="${google}" target="_blank">🔍 Where to Watch</a>
- ${dlSection}
- <br><br><span style="font-size:11px;opacity:0.5">Scarlet AI - Ella venna ready da Hari! 🔥</span></div>`;
- document.getElementById('q').value='';
- window.scrollTo({top:0,behavior:'smooth'});
-}
-</script>
-</body>
-</html>
