@@ -4,303 +4,255 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="monetag" content="885decdd14aefd3c726f3b189e29c0bf">
 <script src="https://5gvci.com/act/files/tag.min.js?z=12037972" data-cfasync="false" async></script>
-<title>Aether AI - WORLD ALL EDITOR</title>
+<title>Aether • Anime World Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#050505;color:#fff;font-family:system-ui}
-.top{position:sticky;top:0;z-index:99;background:#0f0f0f;border-bottom:1px solid #222;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.logo{font-weight:900;font-size:1.2rem;background:linear-gradient(90deg,#8a2be2,#00ffff,#ff00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav{display:flex;gap:4px;background:#151515;padding:4px;border-radius:10px;overflow-x:auto}
-.nav button{padding:7px 12px;border:none;background:transparent;color:#777;border-radius:8px;cursor:pointer;font-weight:800;font-size:11px;white-space:nowrap}
-.nav button.active{background:#fff;color:#000}
-.wrap{max-width:1500px;margin:0 auto;padding:10px;display:flex;flex-wrap:wrap;gap:10px}
-.left{flex:1.4;min-width:340px;background:#111;border:1px solid #222;border-radius:14px;padding:10px;text-align:center;position:sticky;top:68px;height:fit-content}
-.right{flex:1;min-width:340px;background:#111;border:1px solid #222;border-radius:14px;padding:12px;max-height:88vh;overflow-y:auto}
-#canvas{max-width:100%;max-height:62vh;border-radius:10px;background:#000}
-#genImg{max-width:100%;border-radius:10px;display:none;margin:0 auto}
-.btn{padding:8px 10px;background:#1e1e1e;border:1px solid #2a2a2a;color:#fff;border-radius:8px;cursor:pointer;font-size:11px;font-weight:600}
-.btn:hover{border-color:#8a2be2}.btn-ai{background:linear-gradient(90deg,#8a2be2,#00d4ff);border:none;font-weight:800}
-.btn-w{background:#fff;color:#000;border:none;font-weight:900}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:6px 0}.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin:6px 0}.grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;margin:6px 0}
-.sec{font-size:11px;font-weight:800;color:#8a2be2;margin:12px 0 5px;letter-spacing:0.5px;text-transform:uppercase;border-left:3px solid #8a2be2;padding-left:6px}
-.slider{margin:5px 0}.slider label{display:flex;justify-content:space-between;font-size:10px;color:#888}input[type=range]{width:100%;accent-color:#8a2be2}
-textarea,input[type=text]{width:100%;background:#0e0e0e;border:1px solid #2a2a2a;color:#fff;padding:10px;border-radius:8px;font-size:12px;outline:none;margin:4px 0}
-.upload{border:2px dashed #333;border-radius:10px;padding:14px;display:block;cursor:pointer;margin:6px 0;font-size:12px}
-.upload:hover{border-color:#8a2be2}
-.loader{width:32px;height:32px;border:3px solid #222;border-top-color:#8a2be2;border-radius:50%;animation:spin 1s linear infinite;display:none;margin:10px auto}
-@keyframes spin{to{transform:rotate(360deg)}}
-#status{font-size:11px;color:#0f0;margin-top:6px}
-.pill{padding:4px 8px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:20px;font-size:10px;cursor:pointer;display:inline-block;margin:2px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0614;color:#fff;font-family:'Fredoka',system-ui;overflow-x:hidden}
+/* ANIME GRADIENT BG */
+.animeBg{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 80% at 20% 10%,#ff6ec7 0%,#a855f7 25%,#7c3aed 50%,#0a0614 100%);opacity:0.9}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);border-bottom:3px solid #ff6ec7;box-shadow:0 4px 20px rgba(255,110,199,0.3)}
+.brand{font-family:'Mochiy Pop One';font-size:14px;color:#0a0614;display:flex;align-items:center;gap:8px}
+.brand.logo{width:32px;height:32px;background:linear-gradient(135deg,#ff6ec7,#7c3aed);border-radius:10px;display:grid;place-items:center;color:#fff;font-size:18px;transform:rotate(-5deg);box-shadow:0 4px 0 #0a0614}
+.brand span{color:#ff6ec7}
+.actions{display:flex;gap:8px}
+.kawaiiBtn{width:42px;height:42px;border-radius:14px;border:3px solid #0a0614;background:#fff;display:grid;place-items:center;font-size:18px;cursor:pointer;box-shadow:0 3px 0 #0a0614;transition:0.1s}
+.kawaiiBtn:active{transform:translateY(3px);box-shadow:none}
+.hdBtn{padding:8px 16px;border-radius:14px;background:#ffde59;border:3px solid #0a0614;color:#0a0614;font-weight:800;font-size:12px;cursor:pointer;box-shadow:0 3px 0 #0a0614}
+.hero{margin-top:60px;position:relative;min-height:58vh;display:grid;place-items:center;padding:16px}
+#canvas,#genImg{max-width:100%;max-height:60vh;border-radius:28px;border:4px solid #fff;box-shadow:8px 8px 0 #0a0614,0 20px 40px rgba(0,0,0,0.4);background:#000}
+#genImg{display:none}
+.status{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;border:3px solid #0a0614;padding:8px 16px;border-radius:100px;font-size:11px;font-weight:800;color:#0a0614;display:flex;gap:8px;align-items:center;z-index:5;box-shadow:0 4px 0 #0a0614}
+.dot{width:10px;height:10px;background:#22c55e;border-radius:50%;border:2px solid #0a0614;animation:pop 1s infinite}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.panel{margin:12px;background:#fff;border:4px solid #0a0614;border-radius:28px;padding-bottom:90px;box-shadow:8px 8px 0 #0a0614}
+.handle{width:48px;height:6px;background:#0a0614;border-radius:100px;margin:12px auto}
+.label{font-family:'Mochiy Pop One';font-size:12px;color:#7c3aed;padding:16px 18px 8px;display:flex;align-items:center;gap:8px}
+.label i{background:linear-gradient(135deg,#ff6ec7,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:normal}
+.promptWrap{margin:0 12px;background:#fef3ff;border:3px solid #0a0614;border-radius:20px;padding:12px;box-shadow:0 4px 0 #0a0614}
+.promptWrap textarea{width:100%;background:transparent;border:none;color:#0a0614;font-size:14px;font-family:'Fredoka';outline:none;resize:none;height:56px;font-weight:600}
+.promptWrap textarea::placeholder{color:#c4a1d6}
+.chips{margin:10px 12px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chip{white-space:nowrap;background:#fff;border:3px solid #0a0614;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:800;color:#0a0614;cursor:pointer;box-shadow:0 3px 0 #0a0614;flex-shrink:0}
+.chip:active{transform:translateY(3px);box-shadow:none}
+.chip.pink{background:#ff6ec7;color:#fff}.chip.yellow{background:#ffde59}.chip.purple{background:#a855f7;color:#fff}
+.styleScroller{padding:0 12px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+.styleCard{min-width:80px;height:92px;border-radius:20px;background:#fff;border:3px solid #0a0614;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;flex-shrink:0;box-shadow:0 4px 0 #0a0614;transition:0.1s}
+.styleCard:active{transform:translateY(4px);box-shadow:none}
+.styleCard.active{background:#ffde59;transform:translateY(-4px) rotate(-2deg);box-shadow:0 8px 0 #0a0614}
+.styleCard.ic{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;font-size:22px;border:2px solid #0a0614}.styleCard.nm{font-size:11px;font-weight:800;color:#0a0614}
+.generateBtn{margin:14px 12px 0;width:calc(100% - 24px);background:linear-gradient(135deg,#ff6ec7,#7c3aed);border:3px solid #0a0614;border-radius:20px;height:56px;font-family:'Mochiy Pop One';font-size:14px;color:#fff;cursor:pointer;box-shadow:0 5px 0 #0a0614;display:flex;align-items:center;justify-content:center;gap:10px}
+.generateBtn:active{transform:translateY(5px);box-shadow:none}
+.toolGrid{padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tool{height:72px;background:#fff;border:3px solid #0a0614;border-radius:20px;display:flex;align-items:center;gap:12px;padding:0 12px;cursor:pointer;box-shadow:0 4px 0 #0a0614;transition:0.1s}
+.tool:active{transform:translateY(4px);box-shadow:none}
+.tool.ico{width:44px;height:44px;border-radius:14px;border:2px solid #0a0614;display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.tool:nth-child(1).ico{background:#ff6ec7}.tool:nth-child(2).ico{background:#ffde59}.tool:nth-child(3).ico{background:#7dd3fc}.tool:nth-child(4).ico{background:#a7f3d0}.tool:nth-child(5).ico{background:#fca5a5}.tool:nth-child(6).ico{background:#c4b5fd}.tool:nth-child(7).ico{background:#fdba74}.tool:nth-child(8).ico{background:#86efac}
+.tool.t b{font-size:12px;color:#0a0614;display:block;font-family:'Mochiy Pop One';font-weight:400;font-size:11px}.tool.t span{font-size:10px;color:#7c5a8a;font-weight:700}
+.sliderWrap{margin:0 12px 12px;background:#fef3ff;border:3px solid #0a0614;border-radius:18px;padding:14px;box-shadow:0 4px 0 #0a0614}
+.sliderWrap.row{display:flex;justify-content:space-between;font-family:'Mochiy Pop One';font-size:10px;color:#0a0614;margin-bottom:8px}
+input[type=range]{width:100%;accent-color:#ff6ec7;height:8px}
+.bottom{position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;border-top:4px solid #0a0614;padding:8px 6px max(8px,env(safe-area-inset-bottom));display:flex;justify-content:space-around;box-shadow:0 -8px 0 rgba(0,0,0,0.1)}
+.bItem{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-radius:16px;cursor:pointer;color:#9ca3af;transition:0.15s;border:2px solid transparent}
+.bItem.active{background:#ffde59;border:3px solid #0a0614;color:#0a0614;box-shadow:0 3px 0 #0a0614;transform:translateY(-6px)}
+.bItem.bi{font-size:20px}.bItem.bt{font-size:8px;font-weight:800;font-family:'Mochiy Pop One'}
+.searchModal{position:fixed;inset:0;z-index:200;background:rgba(10,6,20,0.85);backdrop-filter:blur(16px);display:none;padding:16px;padding-top:70px}
+.searchBox{background:#fff;border:4px solid #0a0614;border-radius:20px;display:flex;align-items:center;padding:0 14px;gap:10px;box-shadow:0 6px 0 #0a0614}
+.searchBox input{flex:1;background:transparent;border:none;color:#0a0614;padding:16px 0;font-size:15px;font-family:'Fredoka';font-weight:700;outline:none}
+.resultList{margin-top:16px;display:grid;gap:10px;max-height:60vh;overflow-y:auto}
+.resItem{background:#fff;border:3px solid #0a0614;border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;box-shadow:0 4px 0 #0a0614}
+
+/* ANIME LOADING - RUNNING CHARACTER */
+#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);z-index:30;border-radius:28px}
+.runTrack{width:280px;height:100px;position:relative;background:#fff;border:4px solid #0a0614;border-radius:100px;overflow:hidden;box-shadow:8px 8px 0 #0a0614}
+.runBg{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#fef3ff 0px,#fef3ff 20px,#ffde59 20px,#ffde59 40px);animation:bgmove 0.5s linear infinite}
+@keyframes bgmove{to{transform:translateX(40px)}}
+.runner{position:absolute;left:20px;top:50%;transform:translateY(-50%);font-size:48px;animation:run 0.6s infinite alternate,moveX 1.2s infinite linear}
+@keyframes run{0%{transform:translateY(-50%) rotate(-5deg) scaleY(0.95)}100%{transform:translateY(-60%) rotate(5deg) scaleY(1.05)}}
+@keyframes moveX{0%{left:20px}50%{left:160px}100%{left:20px}}
+.loadText{position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);background:#0a0614;color:#fff;padding:6px 14px;border-radius:100px;font-family:'Mochiy Pop One';font-size:11px;white-space:nowrap}
+#file{display:none}
 </style>
 </head>
 <body>
-<div class="top">
-<div class="logo">AETHER - WORLD ALL PHOTO EDITOR 🌍 120+ TOOLS</div>
-<div class="nav">
-<button class="active" onclick="switchM('gen',this)">🎨 GENERATE</button>
-<button onclick="switchM('ai',this)">🤖 AI 15</button>
-<button onclick="switchM('basic',this)">✂️ BASIC 10</button>
-<button onclick="switchM('adjust',this)">⚙️ ADJUST 15</button>
-<button onclick="switchM('filter',this)">🎨 FILTER 30</button>
-<button onclick="switchM('retouch',this)">💄 RETOUCH 10</button>
-<button onclick="switchM('effect',this)">💥 EFFECT 15</button>
-<button onclick="switchM('text',this)">📝 TEXT</button>
-</div>
-<button class="btn btn-w" onclick="downloadAll()">⬇️ DOWNLOAD HD</button>
-</div>
+<div class="animeBg"></div>
 
-<div class="wrap">
-<div class="left">
-<canvas id="canvas" width="700" height="700"></canvas>
-<img id="genImg"/>
-<label for="file" class="upload" id="upL">📸 UPLOAD OR GENERATE - WORLD ALL TOOLS READY DA HARI!<br><span style="color:#555">Supports: JPG PNG WEBP HEIC - All Formats</span></label>
-<input type="file" id="file" accept="image/*" hidden>
-<div class="loader" id="loader"></div>
-<div id="status">Ready da! 120+ tools loaded 🔥 All in world included!</div>
-<div style="font-size:9px;color:#333;margin-top:4px">💰 Monetag 2 Tags Active - Per Tool = $$$ | In-Page + OnClick</div>
-</div>
-
-<div class="right">
-<!-- GENERATE -->
-<div id="m-gen">
-<div class="sec">🎨 TEXT TO IMAGE - ALL STYLES IN WORLD</div>
-<textarea id="prompt" placeholder="Type anything da: Tamil boy Chennai beach, Lord Murugan, anime girl, cyberpunk city... (Tamil/English)"></textarea>
-<div class="grid2">
-<button class="btn btn-ai active sBtn" data-s="photorealistic, 8k, ultra detailed">📸 Realistic</button>
-<button class="btn sBtn" data-s="anime, studio ghibli">🎌 Anime</button>
-<button class="btn sBtn" data-s="cyberpunk, neon">🌃 Cyberpunk</button>
-<button class="btn sBtn" data-s="3d pixar, octane render">🧊 3D</button>
-<button class="btn sBtn" data-s="oil painting, masterpiece">🎨 Painting</button>
-<button class="btn sBtn" data-s="vintage 90s aesthetic">💜 90s</button>
-<button class="btn sBtn" data-s="fantasy, magical, divine">🧙 Fantasy</button>
-<button class="btn sBtn" data-s="kawaii, cute, chibi">😍 Cute</button>
-</div>
-<div class="grid3">
-<button class="btn active szBtn" data-sz="1024x1024">⬜ 1:1</button>
-<button class="btn szBtn" data-sz="1024x1792">📱 9:16</button>
-<button class="btn szBtn" data-sz="1792x1024">🖥️ 16:9</button>
-</div>
-<button class="btn btn-ai" style="width:100%;padding:13px;margin-top:8px" onclick="genAI()">🚀 GENERATE - WORLD AI</button>
-<div style="margin-top:8px">
-<span class="pill" onclick="setP('Thala Dhoni CSK stadium cheering')">Dhoni</span>
-<span class="pill" onclick="setP('beautiful Tamil girl in saree temple')">Tamil Girl</span>
-<span class="pill" onclick="setP('Chennai Marina beach sunset cinematic')">Chennai</span>
-<span class="pill" onclick="setP('Lord Shiva cosmic powerful')">Shiva</span>
-<span class="pill" onclick="setP('Iron Man suit Tamil Nadu')">Iron Man</span>
+<div class="topbar">
+<div class="brand"><div class="logo">A</div>AETHER <span>ANIME ✨</span></div>
+<div class="actions">
+<button class="kawaiiBtn" onclick="openSearch()">🔍</button>
+<button class="hdBtn" onclick="downloadAll()">⬇ HD</button>
 </div>
 </div>
 
-<!-- AI -->
-<div id="m-ai" style="display:none">
-<div class="sec">🤖 AI EDITING - 15 TOOLS - WORLD ALL AI</div>
-<div class="grid2">
-<button class="btn btn-ai" onclick="ai('bgremove')">✂️ BG REMOVE</button>
-<button class="btn btn-ai" onclick="ai('bgblur')">🌫️ BG BLUR</button>
-<button class="btn btn-ai" onclick="ai('bgreplace')">🖼️ BG REPLACE</button>
-<button class="btn btn-ai" onclick="ai('enhance')">✨ ENHANCE HD</button>
-<button class="btn btn-ai" onclick="ai('upscale')">🔍 UPSCALE 4X</button>
-<button class="btn btn-ai" onclick="ai('cartoon')">🎭 CARTOON</button>
-<button class="btn btn-ai" onclick="ai('anime')">🎌 ANIME AI</button>
-<button class="btn btn-ai" onclick="ai('colorize')">🌈 COLORIZE</button>
-<button class="btn btn-ai" onclick="ai('deoldify')">👴 DEOLDIFY</button>
-<button class="btn btn-ai" onclick="ai('smooth')">😎 FACE SMOOTH</button>
-<button class="btn btn-ai" onclick="ai('whiten')">🦷 WHITEN</button>
-<button class="btn btn-ai" onclick="ai('makeup')">💄 MAKEUP AI</button>
-<button class="btn btn-ai" onclick="ai('hair')">💇 HAIR COLOR</button>
-<button class="btn btn-ai" onclick="ai('age')">👶 AGE AI</button>
-<button class="btn btn-ai" onclick="ai('hd')">💎 HD PRO</button>
+<div class="searchModal" id="searchModal">
+<div class="searchBox"><span style="font-size:20px">🌸</span><input id="searchInput" placeholder="Search anime tools kawaii... bg remove, cartoon..." oninput="doSearch(this.value)"><button class="kawaiiBtn" style="width:36px;height:36px" onclick="closeSearch()">✕</button></div>
+<div class="resultList" id="resultList"></div>
+</div>
+
+<div class="hero">
+<img id="genImg"/><canvas id="canvas" width="900" height="900"></canvas>
+<div class="status"><div class="dot"></div><span id="st">🌸 Anime World • 120 Tools Ready!</span></div>
+
+<!-- ANIME RUNNING LOADING -->
+<div id="loader">
+<div style="position:relative">
+<div class="runTrack"><div class="runBg"></div><div class="runner">🏃‍♀️💨</div></div>
+<div class="loadText">✨ Anime Girl Running... Generating ✨</div>
+</div>
 </div>
 </div>
 
-<!-- BASIC -->
-<div id="m-basic" style="display:none">
-<div class="sec">✂️ BASIC - 10 TOOLS - WORLD STANDARD</div>
-<div class="grid2">
-<button class="btn" onclick="basic('rotate90')">↻ Rotate 90°</button>
-<button class="btn" onclick="basic('rotate-90')">↺ Rotate -90°</button>
-<button class="btn" onclick="basic('fliph')">↔ Flip H</button>
-<button class="btn" onclick="basic('flipv')">↕ Flip V</button>
-<button class="btn" onclick="basic('crop')">🔲 Crop Center</button>
-<button class="btn" onclick="basic('resize50')">📏 Resize 50%</button>
-<button class="btn" onclick="basic('resize200')">📏 Resize 200%</button>
-<button class="btn" onclick="basic('straighten')">📐 Straighten</button>
-<button class="btn" onclick="basic('mirror')">🪞 Mirror</button>
-<button class="btn" onclick="resetAll()">🔄 Reset All</button>
+<div class="panel">
+<div class="handle"></div>
+
+<div id="tab-gen">
+<div class="label">✨ <i>What to create?</i> 🎨</div>
+<div class="promptWrap"><textarea id="prompt" placeholder="Kawaii Tamil anime girl cherry blossom, breakup sad boy rain anime style..."></textarea></div>
+<div class="chips">
+<div class="chip pink" onclick="setP('Kawaii Tamil anime girl cherry blossom pink hair big eyes')">🌸 Kawaii Girl</div>
+<div class="chip yellow" onclick="setP('Tamil boy anime heartbreak rain night city neon sad')">💔 Breakup Anime</div>
+<div class="chip purple" onclick="setP('Lord Murugan anime divine super power aura fire')">🔥 Murugan Anime</div>
+<div class="chip" onclick="setP('Chibi Thala Dhoni CSK cute chibi stadium')">🏏 Chibi Dhoni</div>
+<div class="chip pink" onclick="setP('Anime couple love hug sunset beach kawaii')">💖 Love Anime</div>
+</div>
+
+<div class="label">🎨 <i>Anime Styles</i> - Colourful!</div>
+<div class="styleScroller" id="styleRow">
+<div class="styleCard active" data-s="anime, kawaii, studio ghibli, ultra cute"><div class="ic" style="background:#ff6ec7">🎌</div><div class="nm">Kawaii</div></div>
+<div class="styleCard" data-s="anime, cyberpunk, neon city, blade runner"><div class="ic" style="background:#7dd3fc">🌃</div><div class="nm">Cyber</div></div>
+<div class="styleCard" data-s="shojo anime, sparkles, magical girl"><div class="ic" style="background:#fca5a5">💖</div><div class="nm">Shojo</div></div>
+<div class="styleCard" data-s="shonen anime, epic battle, fire aura"><div class="ic" style="background:#fdba74">🔥</div><div class="nm">Shonen</div></div>
+<div class="styleCard" data-s="chibi, cute, small, super deformed"><div class="ic" style="background:#ffde59">😍</div><div class="nm">Chibi</div></div>
+<div class="styleCard" data-s="anime, vintage 90s, sailor moon"><div class="ic" style="background:#c4b5fd">💿</div><div class="nm">90s Anime</div></div>
+<div class="styleCard" data-s="photorealistic anime, 8k"><div class="ic" style="background:#a7f3d0">📸</div><div class="nm">Real Anime</div></div>
+</div>
+<button class="generateBtn" onclick="genAI()">✨ GENERATE ANIME MAGIC ✨ 🚀</button>
+</div>
+
+<div id="tab-ai" style="display:none">
+<div class="label">🤖 <i>AI Tools</i> - Kawaii Icons!</div>
+<div class="toolGrid">
+<div class="tool" onclick="ai('bgremove')"><div class="ico">✂️</div><div class="t"><b>BG Cut</b><span>Background cut</span></div></div>
+<div class="tool" onclick="ai('bgblur')"><div class="ico">🌸</div><div class="t"><b>Bokeh</b><span>Blur background</span></div></div>
+<div class="tool" onclick="ai('enhance')"><div class="ico">💖</div><div class="t"><b>HD Kawaii</b><span>Make HD</span></div></div>
+<div class="tool" onclick="ai('upscale')"><div class="ico">🔍</div><div class="t"><b>Big Big</b><span>Upscale 2x</span></div></div>
+<div class="tool" onclick="ai('cartoon')"><div class="ico">🎭</div><div class="t"><b>Toon</b><span>Anime toon</span></div></div>
+<div class="tool" onclick="ai('anime')"><div class="ico">🎌</div><div class="t"><b>Anime AI</b><span>Manga style</span></div></div>
+<div class="tool" onclick="ai('smooth')"><div class="ico">✨</div><div class="t"><b>Smooth</b><span>Kawaii skin</span></div></div>
+<div class="tool" onclick="ai('colorize')"><div class="ico">🌈</div><div class="t"><b>Color Pop</b><span>Colourize</span></div></div>
 </div>
 </div>
 
-<!-- ADJUST -->
-<div id="m-adjust" style="display:none">
-<div class="sec">⚙️ ADJUST - 15 SLIDERS - WORLD ALL ADJUSTMENTS</div>
+<div id="tab-adjust" style="display:none">
+<div class="label">⚙️ <i>Adjust</i> - Colourful Sliders!</div>
 <div id="sliders"></div>
 </div>
 
-<!-- FILTER -->
-<div id="m-filter" style="display:none">
-<div class="sec">🎨 FILTERS - 30 FILTERS - WORLD ALL FILTERS</div>
-<div class="grid3" id="filterGrid"></div>
+<div id="tab-filter" style="display:none">
+<div class="label">🌈 <i>Filters</i> - Anime Filters!</div>
+<div class="toolGrid" id="fGrid"></div>
 </div>
 
-<!-- RETOUCH -->
-<div id="m-retouch" style="display:none">
-<div class="sec">💄 RETOUCH - 10 BEAUTY TOOLS - WORLD BEAUTY</div>
-<div class="grid2">
-<button class="btn" onclick="ai('smooth')">😎 Skin Smooth</button>
-<button class="btn" onclick="ai('blemish')">✨ Blemish Remove</button>
-<button class="btn" onclick="ai('whiten')">🦷 Teeth Whiten</button>
-<button class="btn" onclick="ai('redeye')">👁️ Red Eye</button>
-<button class="btn" onclick="ai('slim')">😊 Slim Face</button>
-<button class="btn" onclick="ai('bigeye')">👀 Big Eyes</button>
-<button class="btn" onclick="ai('lips')">👄 Lip Color</button>
-<button class="btn" onclick="ai('nose')">👃 Nose Slim</button>
-<button class="btn" onclick="ai('makeup')">💄 Makeup</button>
-<button class="btn" onclick="ai('tattoo')">🧹 Tattoo Remove</button>
+<div id="tab-more" style="display:none">
+<div class="label">💥 <i>More Magic</i></div>
+<div class="toolGrid">
+<div class="tool" onclick="applyF('glitch')"><div class="ico" style="background:#ff6ec7">💥</div><div class="t"><b>Glitch</b><span>Cyber error</span></div></div>
+<div class="tool" onclick="applyF('neon')"><div class="ico" style="background:#ffde59">💡</div><div class="t"><b>Neon</b><span>Glow glow</span></div></div>
+<div class="tool" onclick="applyF('sakura')"><div class="ico" style="background:#fca5a5">🌸</div><div class="t"><b>Sakura</b><span>Pink bloom</span></div></div>
+<div class="tool" onclick="applyF('fire')"><div class="ico" style="background:#fdba74">🔥</div><div class="t"><b>Fire Aura</b><span>Power up</span></div></div>
+<div class="tool" onclick="basic('rotate90')"><div class="ico" style="background:#7dd3fc">↻</div><div class="t"><b>Rotate</b><span>Kuru kuru</span></div></div>
+<div class="tool" onclick="basic('fliph')"><div class="ico" style="background:#c4b5fd">↔</div><div class="t"><b>Flip</b><span>Mirror</span></div></div>
+<div class="tool" onclick="addText()"><div class="ico" style="background:#a7f3d0">✏️</div><div class="t"><b>Kawaii Text</b><span>Add text</span></div></div>
+<div class="tool" onclick="toggleDraw()"><div class="ico" style="background:#ffde59">🎨</div><div class="t"><b>Oekaki</b><span>Draw</span></div></div>
 </div>
-</div>
-
-<!-- EFFECT -->
-<div id="m-effect" style="display:none">
-<div class="sec">💥 EFFECTS - 15 EFFECTS - WORLD ALL EFFECTS</div>
-<div class="grid3">
-<button class="btn" onclick="filter('glitch')">💥 Glitch</button>
-<button class="btn" onclick="filter('neon')">💡 Neon</button>
-<button class="btn" onclick="filter('pixel')">🧊 Pixelate</button>
-<button class="btn" onclick="filter('emboss')">🗿 Emboss</button>
-<button class="btn" onclick="filter('swirl')">🌀 Swirl</button>
-<button class="btn" onclick="filter('wave')">🌊 Wave</button>
-<button class="btn" onclick="filter('mirror')">🪞 Mirror</button>
-<button class="btn" onclick="filter('kaleido')">🔮 Kaleidoscope</button>
-<button class="btn" onclick="filter('oil')">🎨 Oil Paint</button>
-<button class="btn" onclick="filter('sketch')">✏️ Sketch</button>
-<button class="btn" onclick="filter('fire')">🔥 Fire</button>
-<button class="btn" onclick="filter('ice')">❄️ Ice</button>
-<button class="btn" onclick="filter('old')">📼 VHS Old</button>
-<button class="btn" onclick="filter('hdr')">☀️ HDR</button>
-<button class="btn" onclick="filter('drama')">🎭 Drama</button>
+<div class="label">📝 <i>Kawaii Text</i></div>
+<div class="promptWrap"><textarea id="txt" style="height:44px" placeholder="HARI ❤️, KAWAII, SENPAI..."></textarea></div>
 </div>
 </div>
 
-<!-- TEXT -->
-<div id="m-text" style="display:none">
-<div class="sec">📝 TEXT & DRAW - WORLD ALL TEXT TOOLS</div>
-<input type="text" id="txt" placeholder="Text: HARI, LOVE, etc">
-<div class="grid2">
-<button class="btn btn-ai" onclick="addText()">Add Text</button>
-<button class="btn" onclick="clearTxt()">Clear</button>
-</div>
-<div class="sec">✏️ DRAW</div>
-<div class="grid2">
-<button class="btn" onclick="toggleDraw()">✏️ Brush ON/OFF</button>
-<button class="btn" onclick="clearDraw()">Clear Draw</button>
-</div>
-<div class="sec">🎭 STICKERS & EMOJI - WORLD ALL</div>
-<div class="grid4">
-<button class="btn" onclick="addSticker('❤️')">❤️</button>
-<button class="btn" onclick="addSticker('🔥')">🔥</button>
-<button class="btn" onclick="addSticker('😎')">😎</button>
-<button class="btn" onclick="addSticker('👑')">👑</button>
-</div>
-</div>
-</div>
+<div class="bottom">
+<div class="bItem active" onclick="switchTab('gen',this)"><div class="bi">🎨</div><div class="bt">GEN</div></div>
+<div class="bItem" onclick="switchTab('ai',this)"><div class="bi">🤖</div><div class="bt">AI 8</div></div>
+<div class="bItem" onclick="switchTab('adjust',this)"><div class="bi">⚙️</div><div class="bt">ADJUST</div></div>
+<div class="bItem" onclick="switchTab('filter',this)"><div class="bi">🌈</div><div class="bt">FILTER 14</div></div>
+<div class="bItem" onclick="switchTab('more',this)"><div class="bi">💥</div><div class="bt">MORE 8</div></div>
 </div>
 
+<input type="file" id="file" accept="image/*">
 <script>(function(s){s.dataset.zone='12038066',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 <script>
 const canvas=document.getElementById('canvas'), ctx=canvas.getContext('2d');
-let img=null, rot=0, fh=1, fv=1, curFil='none', selS='photorealistic, 8k', selSz='1024x1024', drawing=false, lx, ly;
-const slidersData=[
-  ['bri','Brightness',100,0,200],['con','Contrast',100,0,200],['sat','Saturation',100,0,200],
-  ['hue','Hue',0,0,360],['blur','Blur',0,0,10],['sharp','Sharpen',0,0,10],
-  ['vibr','Vibrance',100,0,200],['temp','Temperature',100,0,200],['tint','Tint',100,0,200],
-  ['shadow','Shadows',100,0,200],['high','Highlights',100,0,200],['white','Whites',100,0,200],
-  ['black','Blacks',100,0,200],['vign','Vignette',0,0,100],['noise','Noise',0,0,100]
+let img=null, rot=0, fh=1, fv=1, curF='none', selS='anime, kawaii, studio ghibli, ultra cute', selSz='1024x1024', drawOn=false, drawing=false, lx, ly;
+const sliders=[['bri','☀️ Brightness',100,0,200],['con','◐ Contrast',100,0,200],['sat','🌈 Saturation',100,0,200],['blur','🌸 Blur',0,0,10],['hue','🎨 Hue',0,0,360]];
+const filters=[
+ ['none','Original','⚪'],['grayscale','Mono','⚫'],['sepia','Sepia','🟤'],['vintage','Vintage','📼'],
+ ['cyber','Cyber','🌃'],['sakura','Sakura','🌸'],['warm','Warm','🔥'],['cold','Cold','❄️'],
+ ['cartoon','Toon','🎭'],['bwpro','Mono Pro','⬛'],['kawaii','Kawaii','💖'],['glitch','Glitch','💥'],
+ ['neon','Neon','💡'],['hdr','HDR','☀️']
 ];
-const filtersList=[
-  ['none','Original'],['grayscale','B&W'],['sepia','Sepia'],['vintage','Vintage'],['invert','Invert'],
-  ['cyber','Cyberpunk'],['warm','Warm'],['cold','Cold'],['cartoon','Cartoon'],['bwpro','B&W Pro'],
-  ['colorize','Colorize'],['polaroid','Polaroid'],['kodak','Kodak'],['lomo','Lomo'],['hdr','HDR'],
-  ['drama','Drama'],['grunge','Grunge'],['film','Film'],['fade','Fade'],['matte','Matte'],
-  ['aesthetic','Aesthetic'],['insta','Insta'],['vsco','VSCO'],['moody','Moody'],['bright','Bright'],
-  ['dark','Dark'],['sunset','Sunset'],['ocean','Ocean'],['forest','Forest'],['neon2','Neon']
+const allTools=[
+ {k:'bgremove',n:'BG Cut',d:'Background cut',i:'✂️',a:()=>ai('bgremove')},
+ {k:'bokeh',n:'Bokeh Blur',d:'Anime blur',i:'🌸',a:()=>ai('bgblur')},
+ {k:'kawaii',n:'HD Kawaii',d:'Make HD cute',i:'💖',a:()=>ai('enhance')},
+ {k:'upscale',n:'Big Big',d:'Upscale',i:'🔍',a:()=>ai('upscale')},
+ {k:'cartoon',n:'Toon',d:'Anime toon',i:'🎭',a:()=>ai('cartoon')},
+ {k:'sakura',n:'Sakura',d:'Pink bloom',i:'🌸',a:()=>applyF('sakura')},
+ {k:'glitch',n:'Glitch',d:'Cyber',i:'💥',a:()=>applyF('glitch')},
+ {k:'neon',n:'Neon Glow',d:'Glow',i:'💡',a:()=>applyF('neon')},
+ {k:'text',n:'Kawaii Text',d:'Add text',i:'✏️',a:()=>addText()},
+ {k:'draw',n:'Oekaki Draw',d:'Draw',i:'🎨',a:()=>toggleDraw()},
 ];
 
-function initSliders(){
-  const c=document.getElementById('sliders');
-  slidersData.forEach(([id,name,def,min,max])=>{
-    c.innerHTML+=`<div class="slider"><label><span>${name}</span><span id="v${id}">${def}</span></label><input type="range" id="${id}" min="${min}" max="${max}" value="${def}" oninput="apply()"></div>`;
-  });
+function init(){
+ const s=document.getElementById('sliders');
+ sliders.forEach(([id,n,def,min,max])=>{ s.innerHTML+=`<div class="sliderWrap"><div class="row"><span>${n}</span><span id="v${id}">${def}</span></div><input type="range" id="${id}" min="${min}" max="${max}" value="${def}" oninput="apply()"></div>`; });
+ const f=document.getElementById('fGrid');
+ filters.forEach(([id,n,ic])=>{ const col=['#ff6ec7','#ffde59','#7dd3fc','#a7f3d0','#fca5a5','#c4b5fd'][Math.floor(Math.random()*6)]; f.innerHTML+=`<div class="tool" onclick="applyF('${id}')"><div class="ico" style="background:${col}">${ic}</div><div class="t"><b>${n}</b><span>Filter</span></div></div>`; });
 }
-function initFilters(){
-  const c=document.getElementById('filterGrid');
-  filtersList.forEach(([id,name])=>{
-    c.innerHTML+=`<button class="btn" onclick="applyF('${id}')">${name}</button>`;
-  });
+init();
+
+function openSearch(){ document.getElementById('searchModal').style.display='block'; document.getElementById('searchInput').focus(); doSearch(''); }
+function closeSearch(){ document.getElementById('searchModal').style.display='none'; }
+function doSearch(q){
+ const list=document.getElementById('resultList'); list.innerHTML='';
+ const query=q.toLowerCase();
+ const results=query===''? allTools : allTools.filter(t=> t.k.includes(query) || t.n.toLowerCase().includes(query));
+ results.forEach(t=>{
+   const div=document.createElement('div'); div.className='resItem';
+   div.innerHTML=`<div class="ico" style="width:44px;height:44px;background:#ffde59;border:2px solid #0a0614;border-radius:14px;display:grid;place-items:center;font-size:22px">${t.i}</div><div class="t"><b style="font-family:Mochiy Pop One;font-weight:400;font-size:11px;color:#0a0614">${t.n}</b><br><span style="color:#7c5a8a;font-size:10px;font-weight:700">${t.d}</span></div>`;
+   div.onclick=()=>{ closeSearch(); t.a(); };
+   list.appendChild(div);
+ });
 }
-initSliders(); initFilters();
 
 document.getElementById('file').addEventListener('change', e=>{
-  const f=e.target.files[0]; if(!f) return;
-  const r=new FileReader(); r.onload=ev=>{
-    const im=new Image(); im.onload=()=>{
-      img=im; canvas.width=im.width; canvas.height=im.height; rot=0;fh=1;fv=1;curFil='none'; resetSliders(); draw(); apply();
-      document.getElementById('upL').innerHTML='📸 CHANGE PHOTO'; setStatus('Loaded! 120 tools ready da!'); document.getElementById('genImg').style.display='none'; canvas.style.display='block';
-    }; im.src=ev.target.result;
-  }; r.readAsDataURL(f);
+ const fl=e.target.files[0]; if(!fl) return;
+ const r=new FileReader(); r.onload=ev=>{
+  const im=new Image(); im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; rot=0;fh=1;fv=1;curF='none'; resetS(); draw(); apply(); document.getElementById('genImg').style.display='none'; canvas.style.display='block'; st('🌸 Loaded! Ready Senpai!'); }; im.src=ev.target.result;
+ }; r.readAsDataURL(fl);
 });
 function draw(){ if(!img) return; ctx.save(); ctx.clearRect(0,0,canvas.width,canvas.height); ctx.translate(canvas.width/2,canvas.height/2); ctx.rotate(rot*Math.PI/180); ctx.scale(fh,fv); ctx.drawImage(img,-canvas.width/2,-canvas.height/2,canvas.width,canvas.height); ctx.restore(); }
-function apply(){
-  if(!img && canvas.style.display!=='none'){}
-  const get=id=>document.getElementById(id)?.value||0;
-  let f=`brightness(${get('bri')}%) contrast(${get('con')}%) saturate(${get('sat')}%) hue-rotate(${get('hue')}deg) blur(${get('blur')}px)`;
-  if(curFil==='grayscale') f+=' grayscale(100%)'; if(curFil==='sepia') f+=' sepia(100%)';
-  if(curFil==='vintage') f+=' sepia(40%) contrast(110%) brightness(110%)'; if(curFil==='invert') f+=' invert(100%)';
-  if(curFil==='cyber') f+=' hue-rotate(270deg) saturate(200%)'; if(curFil==='warm') f+=' sepia(30%) saturate(150%)';
-  if(curFil==='cold') f+=' hue-rotate(180deg) saturate(120%)'; if(curFil==='cartoon') f+=' contrast(150%) saturate(180%)';
-  if(curFil==='bwpro') f+=' grayscale(100%) contrast(130%)'; if(curFil==='colorize') f+=' saturate(200%)';
-  if(curFil==='polaroid') f+=' sepia(20%) contrast(90%) brightness(110%)'; if(curFil==='glitch') f+=' hue-rotate(90deg) contrast(150%)';
-  if(curFil==='neon') f+=' saturate(300%) contrast(150%) brightness(120%)'; if(curFil==='hdr') f+=' contrast(140%) saturate(130%)';
-  if(curFil==='aesthetic') f+=' sepia(20%) saturate(130%) hue-rotate(300deg)';
-  canvas.style.filter=f;
-  slidersData.forEach(([id])=>{ const el=document.getElementById('v'+id); if(el) el.innerText=document.getElementById(id).value; });
-}
-function applyF(id){ curFil=id; apply(); setStatus('Filter: '+id+' ✅'); }
-function filter(id){ applyF(id); }
-function resetSliders(){ slidersData.forEach(([id,_,def])=>{ const el=document.getElementById(id); if(el) el.value=def; }); canvas.style.filter='none'; }
-function resetAll(){ rot=0;fh=1;fv=1;curFil='none'; resetSliders(); draw(); apply(); setStatus('Reset ✅'); }
-function basic(t){ if(!img){alert('Upload first da!');return;} if(t==='rotate90') rot+=90; if(t==='rotate-90') rot-=90; if(t==='fliph') fh*=-1; if(t==='flipv') fv*=-1; if(t==='resize50'){canvas.width*=0.5;canvas.height*=0.5} if(t==='resize200'){canvas.width*=2;canvas.height*=2} if(t==='crop'){const s=Math.min(canvas.width,canvas.height)*0.8; const tmp=document.createElement('canvas'); tmp.width=s; tmp.height=s; tmp.getContext('2d').drawImage(canvas,(canvas.width-s)/2,(canvas.height-s)/2,s,s,0,0,s,s); canvas.width=s;canvas.height=s; ctx.drawImage(tmp,0,0); return; } if(t==='mirror'){fh*=-1} draw(); }
-function ai(t){
-  if(!img && document.getElementById('genImg').style.display==='none'){ alert('Upload/Generate first da!'); return; }
-  const actions={
-    bgremove:()=>{ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.drawImage(canvas,0,0); const d=tc.getImageData(0,0,tmp.width,tmp.height); for(let i=0;i<d.data.length;i+=4){ if(d.data[i]>220&&d.data[i+1]>220&&d.data[i+2]>220) d.data[i+3]=0; } ctx.clearRect(0,0,canvas.width,canvas.height); ctx.putImageData(d,0,0); },
-    bgblur:()=>{ document.getElementById('blur').value=5; apply(); },
-    enhance:()=>{ document.getElementById('bri').value=110; document.getElementById('con').value=125; document.getElementById('sat').value=115; apply(); },
-    upscale:()=>{ canvas.width*=2; canvas.height*=2; draw(); },
-    cartoon:()=>applyF('cartoon'), anime:()=>applyF('aesthetic'), colorize:()=>applyF('colorize'),
-    smooth:()=>{ document.getElementById('blur').value=1; document.getElementById('bri').value=105; apply(); },
-    whiten:()=>{ document.getElementById('bri').value=115; apply(); }, makeup:()=>{ document.getElementById('sat').value=130; apply(); },
-    hd:()=>{ document.getElementById('con').value=120; document.getElementById('sharp').value=5; apply(); }
-  };
-  (actions[t]||(()=>{ document.getElementById('bri').value=108; document.getElementById('con').value=112; apply(); }))();
-  setStatus('🤖 AI '+t.toUpperCase()+' done ✅');
-}
-function switchM(id,btn){ document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); ['gen','ai','basic','adjust','filter','retouch','effect','text'].forEach(k=>{ const el=document.getElementById('m-'+k); if(el) el.style.display=k===id?'block':'none'; }); }
-function setStatus(t){ document.getElementById('status').innerText=t; }
+function apply(){ let f=`brightness(${gv('bri')}%) contrast(${gv('con')}%) saturate(${gv('sat')}%) hue-rotate(${gv('hue')}deg) blur(${gv('blur')}px)`; if(curF==='grayscale') f+=' grayscale(100%)'; if(curF==='sepia') f+=' sepia(100%)'; if(curF==='vintage') f+=' sepia(40%) contrast(110%) brightness(110%)'; if(curF==='cyber') f+=' hue-rotate(270deg) saturate(200%)'; if(curF==='sakura') f+=' sepia(20%) saturate(140%) hue-rotate(320deg) brightness(110%)'; if(curF==='warm') f+=' sepia(30%) saturate(150%)'; if(curF==='cold') f+=' hue-rotate(180deg) saturate(120%)'; if(curF==='cartoon') f+=' contrast(150%) saturate(180%)'; if(curF==='bwpro') f+=' grayscale(100%) contrast(130%)'; if(curF==='kawaii') f+=' sepia(10%) saturate(150%) brightness(110%) hue-rotate(300deg)'; if(curF==='glitch') f+=' hue-rotate(90deg) contrast(150%) saturate(200%)'; if(curF==='neon') f+=' saturate(300%) contrast(150%) brightness(120%)'; canvas.style.filter=f; sliders.forEach(([id])=>{ const el=document.getElementById('v'+id); if(el) el.innerText=document.getElementById(id).value; }); }
+function gv(id){ return document.getElementById(id)?.value||0; }
+function applyF(id){ curF=id; apply(); st('Filter: '+id+' 🌸 Applied!'); }
+function resetS(){ sliders.forEach(([id,_,def])=>{ const el=document.getElementById(id); if(el) el.value=def; }); }
+function basic(t){ if(t==='rotate90') rot+=90; if(t==='fliph') fh*=-1; if(t==='flipv') fv*=-1; draw(); st(t+' Done! ✨'); }
+function ai(t){ if(t==='bgremove'){ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.drawImage(canvas,0,0); const d=tc.getImageData(0,0,tmp.width,tmp.height); for(let i=0;i<d.data.length;i+=4){ if(d.data[i]>225&&d.data[i+1]>225&&d.data[i+2]>225) d.data[i+3]=0; } ctx.clearRect(0,0,canvas.width,canvas.height); ctx.putImageData(d,0,0); } if(t==='bgblur'){ document.getElementById('blur').value=6; apply(); } if(t==='enhance'){ document.getElementById('bri').value=110; document.getElementById('con').value=125; document.getElementById('sat').value=130; apply(); } if(t==='upscale'){ canvas.width*=2; canvas.height*=2; draw(); } if(t==='cartoon') applyF('cartoon'); if(t==='anime') applyF('kawaii'); if(t==='smooth'){ document.getElementById('blur').value=1; document.getElementById('bri').value=108; apply(); } st('AI '+t+' Kawaii Done! 💖'); }
+function switchTab(id,el){ document.querySelectorAll('.bItem').forEach(b=>b.classList.remove('active')); el.classList.add('active'); ['gen','ai','adjust','filter','more'].forEach(k=>{ const e=document.getElementById('tab-'+k); if(e) e.style.display=k===id?'block':'none'; }); }
+function st(t){ document.getElementById('st').innerText=t; }
 function setP(t){ document.getElementById('prompt').value=t; }
-document.querySelectorAll('.sBtn').forEach(b=>b.addEventListener('click',()=>{ document.querySelectorAll('.sBtn').forEach(x=>x.classList.remove('btn-ai','active')); b.classList.add('btn-ai','active'); selS=b.dataset.s; }));
-document.querySelectorAll('.szBtn').forEach(b=>b.addEventListener('click',()=>{ document.querySelectorAll('.szBtn').forEach(x=>x.classList.remove('active')); b.classList.add('active'); selSz=b.dataset.sz; }));
-async function genAI(){
-  const p=document.getElementById('prompt').value.trim(); if(!p){ alert('Prompt type pannu da!'); return; }
-  setStatus('🤖 World AI Generating 5 sec...'); document.getElementById('loader').style.display='block';
-  const full=encodeURIComponent(p+', '+selS+', ultra quality'); const seed=Math.floor(Math.random()*100000); const [w,h]=selSz.split('x');
-  const url=`https://image.pollinations.ai/p/${full}?width=${w}&height=${h}&seed=${seed}&nologo=true`;
-  const gi=document.getElementById('genImg'); gi.onload=()=>{ document.getElementById('loader').style.display='none'; gi.style.display='block'; canvas.style.display='none'; const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; draw(); }; im.src=url; setStatus('✅ World AI Generated! Edit pannu da!'); }; gi.onerror=()=>{ document.getElementById('loader').style.display='none'; setStatus('❌ Try again da'); }; gi.src=url; canvas.style.display='none';
-}
-function addText(){ const t=document.getElementById('txt').value; if(!t||!img){ alert('Text & photo venum!'); return; } ctx.save(); ctx.font='bold 70px Arial'; ctx.fillStyle='white'; ctx.strokeStyle='black'; ctx.lineWidth=5; ctx.translate(canvas.width/2,canvas.height/2); ctx.rotate(rot*Math.PI/180); ctx.strokeText(t,-100,0); ctx.fillText(t,-100,0); ctx.restore(); }
-function clearTxt(){ draw(); apply(); } function addSticker(e){ document.getElementById('txt').value=e; addText(); }
-let drawOn=false; function toggleDraw(){ drawOn=!drawOn; setStatus(drawOn?'✏️ Draw ON - swipe on canvas':'Draw OFF'); }
-canvas.addEventListener('mousedown', e=>{ if(!drawOn) return; drawing=true; const r=canvas.getBoundingClientRect(); lx=(e.clientX-r.left)*(canvas.width/r.width); ly=(e.clientY-r.top)*(canvas.height/r.height); });
-canvas.addEventListener('mousemove', e=>{ if(!drawing||!drawOn) return; const r=canvas.getBoundingClientRect(); const x=(e.clientX-r.left)*(canvas.width/r.width), y=(e.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#8a2be2'; ctx.lineWidth=6; ctx.stroke(); lx=x; ly=y; });
-canvas.addEventListener('mouseup', ()=>drawing=false); function clearDraw(){ draw(); apply(); }
-function downloadAll(){ const isImg=document.getElementById('genImg').style.display==='block'; let url; if(isImg) url=document.getElementById('genImg').src; else{ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.filter=canvas.style.filter; tc.drawImage(canvas,0,0); url=tmp.toDataURL('image/png'); } const a=document.createElement('a'); a.download='Aether-World-All-Editor-'+Date.now()+'.png'; a.href=url; a.click(); setStatus('⬇️ Downloaded HD da! Share pannu 💰'); }
+document.querySelectorAll('.styleCard').forEach(b=>b.addEventListener('click',()=>{ if(!b.dataset.s) return; document.getElementById('styleRow').querySelectorAll('.styleCard').forEach(x=>x.classList.remove('active')); b.classList.add('active'); selS=b.dataset.s; }));
+async function genAI(){ const p=document.getElementById('prompt').value.trim(); if(!p){ alert('Prompt type pannu da! Kawaii prompt!'); return; } document.getElementById('loader').style.display='grid'; st('🏃‍♀️ Anime Girl Running...'); const full=encodeURIComponent(p+', '+selS+', kawaii, ultra detailed, anime key visual'); const seed=Math.floor(Math.random()*999999); const [w,h]=selSz.split('x'); const url=`https://image.pollinations.ai/p/${full}?width=${w}&height=${h}&seed=${seed}&nologo=true`; const gi=document.getElementById('genImg'); gi.onload=()=>{ document.getElementById('loader').style.display='none'; gi.style.display='block'; canvas.style.display='none'; const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; draw(); }; im.src=url; st('✨ Generated! Sugoi! ✨'); }; gi.onerror=()=>{ document.getElementById('loader').style.display='none'; st('Try again Senpai!'); }; gi.src=url; canvas.style.display='none'; }
+function addText(){ const t=document.getElementById('txt').value; if(!t){ alert('Kawaii text type pannu da!'); return; } if(!img){ alert('Photo venum Senpai!'); return; } ctx.save(); ctx.font='900 64px Mochiy Pop One'; ctx.fillStyle='#fff'; ctx.strokeStyle='#0a0614'; ctx.lineWidth=8; ctx.translate(canvas.width/2,canvas.height/2); ctx.rotate(rot*Math.PI/180); ctx.strokeText(t,-120,0); ctx.fillText(t,-120,0); ctx.restore(); st('Kawaii Text Added! 💖'); }
+function toggleDraw(){ drawOn=!drawOn; st(drawOn?'🎨 Oekaki ON! Draw!':'Oekaki OFF'); }
+canvas.addEventListener('touchstart', e=>{ if(!drawOn) return; const r=canvas.getBoundingClientRect(); const t=e.touches[0]; lx=(t.clientX-r.left)*(canvas.width/r.width); ly=(t.clientY-r.top)*(canvas.height/r.height); drawing=true; });
+canvas.addEventListener('touchmove', e=>{ if(!drawing||!drawOn) return; e.preventDefault(); const r=canvas.getBoundingClientRect(); const t=e.touches[0]; const x=(t.clientX-r.left)*(canvas.width/r.width), y=(t.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#ff6ec7'; ctx.lineWidth=12; ctx.lineCap='round'; ctx.stroke(); lx=x; ly=y; },{passive:false});
+canvas.addEventListener('touchend', ()=>drawing=false);
+canvas.addEventListener('mousedown', e=>{ if(!drawOn) return; const r=canvas.getBoundingClientRect(); lx=(e.clientX-r.left)*(canvas.width/r.width); ly=(e.clientY-r.top)*(canvas.height/r.height); drawing=true; });
+canvas.addEventListener('mousemove', e=>{ if(!drawing||!drawOn) return; const r=canvas.getBoundingClientRect(); const x=(e.clientX-r.left)*(canvas.width/r.width), y=(e.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#ff6ec7'; ctx.lineWidth=12; ctx.lineCap='round'; ctx.stroke(); lx=x; ly=y; });
+canvas.addEventListener('mouseup', ()=>drawing=false);
+function downloadAll(){ const isImg=document.getElementById('genImg').style.display==='block'; let url; if(isImg) url=document.getElementById('genImg').src; else{ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.filter=canvas.style.filter; tc.drawImage(canvas,0,0); url=tmp.toDataURL('image/png'); } const a=document.createElement('a'); a.download='Anime-Aether-'+Date.now()+'.png'; a.href=url; a.click(); st('HD Downloaded Sugoi! ✨'); }
 </script>
 </body>
 </html>
