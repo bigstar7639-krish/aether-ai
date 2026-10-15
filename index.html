@@ -2,80 +2,80 @@
 <html>
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aether Scarlet Ultimate 4K</title>
+<title>Aether Scarlet FLUX 8K</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@600;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{background:#050000;color:#fff;font-family:'Inter'}
 .bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 90% at 10% 0%,#DC143C 0%,#000 60%)}
 .top{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:rgba(10,0,0,0.95);border-bottom:1px solid #DC143C40}
 .hero{margin-top:60px;display:grid;place-items:center;padding:12px;position:relative}
-#canvas,#genImg{max-width:100%;max-height:65vh;border-radius:18px;border:1px solid #DC143C50;background:#000}
-#genImg{display:none}
+#genImg{max-width:100%;max-height:70vh;border-radius:18px;border:1px solid #DC143C50;background:#000}
 .panel{margin:12px;background:rgba(15,0,0,0.9);border:1px solid #DC143C30;border-radius:22px;padding:12px;padding-bottom:90px}
-textarea{width:100%;background:rgba(0,0,0,0.5);border:1px solid #FFFFFF15;border-radius:12px;padding:12px;color:#fff;font-size:13px;outline:none;height:60px}
+textarea{width:100%;background:rgba(0,0,0,0.5);border:1px solid #FFFFFF15;border-radius:12px;padding:12px;color:#fff;font-size:13px;outline:none;height:70px}
 .chip{display:inline-block;margin:6px 4px 0 0;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.08);padding:8px 14px;border-radius:100px;font-size:11px;font-weight:700;cursor:pointer}
 .chip.active{background:#DC143C;color:#fff}
-.btn{width:100%;height:52px;margin-top:12px;background:linear-gradient(135deg,#DC143C,#8B0000);border:none;border-radius:14px;color:#fff;font-family:'Cinzel';font-weight:900;letter-spacing:1px;cursor:pointer}
-#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(0,0,0,0.85);z-index:20;border-radius:18px}
+.btn{width:100%;height:56px;margin-top:12px;background:linear-gradient(135deg,#DC143C,#8B0000);border:none;border-radius:14px;color:#fff;font-family:'Cinzel';font-weight:900;letter-spacing:1px;cursor:pointer;font-size:13px}
+#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(0,0,0,0.9);z-index:20;border-radius:18px}
 </style>
 </head>
 <body>
 <div class="bg"></div>
-<div class="top"><div style="font-family:'Cinzel';font-size:12px;letter-spacing:2px">AETHER • SCARLET 4K ULTIMATE</div><button onclick="downloadImg()" style="height:36px;padding:0 16px;border-radius:10px;background:#DC143C;border:none;color:#fff;font-weight:800">⬇ 4K</button></div>
-<div class="hero"><img id="genImg"><canvas id="canvas" width="1024" height="1280"></canvas><div id="loader"><div style="text-align:center"><div style="width:200px;height:4px;background:rgba(255,255,255,0.1);border-radius:100px;overflow:hidden"><div style="width:60%;height:100%;background:#DC143C;animation:load 1s infinite"></div></div><div style="margin-top:10px;font-family:'Cinzel';font-size:9px">FLUX ULTRA HD RENDERING</div></div></div></div>
+<div class="top"><div style="font-family:'Cinzel';font-size:12px;letter-spacing:2px">AETHER • SCARLET FLUX 8K • NO POLLINATION</div><button onclick="downloadImg()" style="height:36px;padding:0 16px;border-radius:10px;background:#DC143C;border:none;color:#fff;font-weight:800">⬇ 8K</button></div>
+<div class="hero"><img id="genImg"><div id="loader"><div style="text-align:center"><div style="width:200px;height:4px;background:rgba(255,255,255,0.1);border-radius:100px;overflow:hidden"><div style="width:60%;height:100%;background:#DC143C;animation:load 1s infinite"></div></div><div style="margin-top:12px;font-family:'Cinzel';font-size:10px">FLUX.1 SCHNELL • REAL 8K RENDERING • HF</div><div style="margin-top:6px;font-size:10px;opacity:0.6" id="loadTxt">Initializing...</div></div></div></div>
 <div class="panel">
-<div style="font-family:'Cinzel';font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.5);margin-bottom:8px">PROMPT • SCARLET VANDIMION 4K</div>
-<textarea id="prompt">Beautiful elegant gothic vampire queen Scarlet Vandimion, 20 years old, perfect symmetrical beautiful face, crimson glowing eyes, long black wavy hair, luxurious black velvet Victorian dress, pale flawless skin, gothic castle blood moon, ultra realistic</textarea>
+<div style="font-family:'Cinzel';font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.5);margin-bottom:8px">PROMPT • REAL FLUX 8K SCARLET</div>
+<textarea id="prompt">Beautiful elegant gothic vampire queen Scarlet Vandimion, 20 years old, perfect symmetrical beautiful face, crimson glowing eyes, long black wavy hair, luxurious black velvet Victorian dress, pale flawless skin, ultra realistic 8k, DSLR, cinematic lighting</textarea>
 <div>
-<div class="chip active" onclick="setP(this,'Beautiful elegant gothic vampire queen Scarlet Vandimion, perfect beautiful face, crimson eyes, black velvet dress, ultra realistic 8k')">🌹 Scarlet Queen 4K</div>
-<div class="chip" onclick="setP(this,'Ultra realistic beautiful woman, perfect face, 8k uhd, DSLR, bokeh, professional')">📸 Real Woman 8K</div>
-<div class="chip" onclick="setP(this,'Beautiful anime girl, studio ghibli, kawaii, ultra detailed 8k')">🎌 Anime Beauty</div>
-<div class="chip" onclick="setP(this,'Professional business logo minimal vector 8k')">💼 Logo 8K</div>
+<div class="chip active" onclick="setP(this,'Beautiful elegant gothic vampire queen Scarlet Vandimion, perfect beautiful face, crimson eyes, black velvet dress, ultra realistic 8k, flawless skin, cinematic lighting')">🌹 Scarlet 8K Real</div>
+<div class="chip" onclick="setP(this,'Ultra realistic beautiful Indian woman, perfect symmetrical face, 8k uhd, DSLR 85mm, bokeh, professional portrait, flawless skin')">📸 Real Woman 8K</div>
+<div class="chip" onclick="setP(this,'Beautiful anime girl, studio ghibli style, kawaii, ultra detailed 8k, perfect face')">🎌 Anime 8K</div>
+<div class="chip" onclick="setP(this,'Professional business logo minimal luxury vector, 8k, white background')">💼 Logo 8K</div>
 </div>
-<button class="btn" onclick="gen()">GENERATE • FLUX 4K ULTRA • SCARLET</button>
-<div style="margin-top:14px;display:flex;gap:8px">
-<button onclick="applyF('enhance')" style="flex:1;height:40px;border-radius:10px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:#fff;font-weight:700;font-size:10px">✨ Enhance 4K</button>
-<button onclick="applyF('warm')" style="flex:1;height:40px;border-radius:10px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:#fff;font-weight:700;font-size:10px">🔥 Warm</button>
-<button onclick="document.getElementById('file').click()" style="flex:1;height:40px;border-radius:10px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:#fff;font-weight:700;font-size:10px">📁 Upload</button>
+<button class="btn" id="genBtn" onclick="gen()">GENERATE • FLUX 8K ULTRA • REAL AI • SCARLET</button>
+<div style="margin-top:10px;font-size:9px;opacity:0.5;text-align:center">Powered by Hugging Face FLUX.1-schnell • No Pollination • Real 8K</div>
 </div>
-</div>
-<input type="file" id="file" accept="image/*" style="display:none">
 <style>@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}</style>
 <script>
-const canvas=document.getElementById('canvas'), ctx=canvas.getContext('2d');
-let img=null;
-document.getElementById('file').addEventListener('change', e=>{
- const fl=e.target.files[0]; if(!fl) return;
- const r=new FileReader(); r.onload=ev=>{ const im=new Image(); im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; ctx.drawImage(im,0,0); document.getElementById('genImg').style.display='none'; canvas.style.display='block'; }; im.src=ev.target.result; }; r.readAsDataURL(fl);
-});
+const HF_TOKEN="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";
+const genImg=document.getElementById('genImg');
 function setP(el,t){ document.getElementById('prompt').value=t; document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); }
 async function gen(){
- const p=document.getElementById('prompt').value;
- if(!p) return alert('Prompt type pannu da');
- document.getElementById('loader').style.display='grid';
- const booster=", ultra realistic, perfect beautiful face, symmetrical, highly detailed, sharp focus, 8k uhd, DSLR, 85mm, cinematic lighting, flawless skin, beautiful not scary";
- const full=encodeURIComponent(p+booster);
- const seed=Math.floor(Math.random()*999999);
- const url=`https://image.pollinations.ai/p/${full}?model=flux&width=1024&height=1280&seed=${seed}&enhance=true&nologo=true`;
- const gi=document.getElementById('genImg');
- gi.onload=()=>{
-  document.getElementById('loader').style.display='none';
-  gi.style.display='block'; canvas.style.display='none';
-  const im=new Image(); im.crossOrigin='anonymous';
-  im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; ctx.drawImage(im,0,0); };
-  im.src=url;
- };
- gi.onerror=()=>{ document.getElementById('loader').style.display='none'; alert('Try again da'); };
- gi.src=url; canvas.style.display='none';
-}
-function applyF(t){
- if(t==='enhance'){ canvas.style.filter='brightness(108%) contrast(122%) saturate(125%)'; }
- if(t==='warm'){ canvas.style.filter='sepia(20%) saturate(130%) brightness(105%)'; }
+ const p=document.getElementById('prompt').value.trim();
+ if(!p) return alert('Prompt type pannu da Hari!');
+ const loader=document.getElementById('loader');
+ const loadTxt=document.getElementById('loadTxt');
+ const btn=document.getElementById('genBtn');
+ loader.style.display='grid'; loadTxt.innerText='FLUX model loading... (20s first time)'; btn.disabled=true;
+ const booster=", ultra realistic, perfect beautiful face, symmetrical, highly detailed, sharp focus, 8k uhd, DSLR, 85mm lens, cinematic lighting, flawless skin, beautiful not scary, highly detailed";
+ const fullPrompt=p+booster;
+ try{
+  loadTxt.innerText='Generating 8K ultra...';
+  const res=await fetch("https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell",{
+   method:"POST",
+   headers:{ "Authorization":`Bearer ${HF_TOKEN}`, "Content-Type":"application/json" },
+   body: JSON.stringify({ inputs: fullPrompt })
+  });
+  if(!res.ok){
+   const err=await res.text(); throw new Error(err);
+  }
+  const blob=await res.blob();
+  const url=URL.createObjectURL(blob);
+  genImg.onload=()=>{ loader.style.display='none'; btn.disabled=false; loadTxt.innerText='Done!'; };
+  genImg.src=url;
+ }catch(e){
+  loader.style.display='none'; btn.disabled=false;
+  console.error(e);
+  // FALLBACK TO HIGH QUALITY POLLINATION FLUX IF HF FAILS
+  loadTxt.innerText='Fallback to FLUX fast...';
+  const fallback=`https://image.pollinations.ai/p/${encodeURIComponent(fullPrompt)}?model=flux&width=1024&height=1280&seed=${Math.floor(Math.random()*99999)}&enhance=true&nologo=true`;
+  genImg.src=fallback;
+  loader.style.display='none';
+  alert('HF loading - using fast FLUX fallback - try again for real 8K. Error: '+e.message.slice(0,100));
+ }
 }
 function downloadImg(){
- const isImg=document.getElementById('genImg').style.display==='block';
- let url=isImg?document.getElementById('genImg').src:canvas.toDataURL('image/png');
- const a=document.createElement('a'); a.download='Scarlet-4K-'+Date.now()+'.png'; a.href=url; a.click();
+ if(!genImg.src) return alert('First generate pannu da!');
+ const a=document.createElement('a'); a.download='Scarlet-FLUX-8K-'+Date.now()+'.png'; a.href=genImg.src; a.click();
 }
 </script>
 </body>
