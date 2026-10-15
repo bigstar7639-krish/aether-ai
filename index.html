@@ -4,182 +4,148 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="monetag" content="885decdd14aefd3c726f3b189e29c0bf">
 <script src="https://5gvci.com/act/files/tag.min.js?z=12037972" data-cfasync="false" async></script>
-<title>Aether • 8K Golden Anime King</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Fredoka:wght@600;700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<title>Aether - Scarlet Vandimion • Professional 8K</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Cinzel+Decorative:wght@700&family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050508;color:#fff;font-family:'Fredoka';overflow-x:hidden}
-.goldBg{position:fixed;inset:0;z-index:-1;background:radial-gradient(100% 80% at 20% 10%,#FFD700 0%,#B8860B 15%,#0a0614 55%,#000 100%)}
-.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a0a 100%);border-bottom:4px solid #FFD700;box-shadow:0 4px 20px rgba(255,215,0,0.4)}
-.brand{font-family:'Cinzel';font-size:13px;color:#FFD700;display:flex;align-items:center;gap:10px;letter-spacing:1px}
-.logoA{width:38px;height:38px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:12px;display:grid;place-items:center;color:#000;font-size:20px;font-weight:900;border:3px solid #FFD700;box-shadow:0 0 15px rgba(255,215,0,0.6)}
-.menuBtn{width:44px;height:44px;border-radius:14px;border:3px solid #FFD700;background:linear-gradient(135deg,#1a1a0a,#000);display:grid;place-items:center;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(255,215,0,0.3);color:#FFD700}
-.kBtn{width:44px;height:44px;border-radius:14px;border:3px solid #FFD700;background:#fff;display:grid;place-items:center;font-size:20px;cursor:pointer;box-shadow:0 3px 0 #B8860B}
-.hdBtn{padding:10px 18px;border-radius:14px;background:linear-gradient(135deg,#FFD700,#FFA500);border:3px solid #000;color:#000;font-weight:900;font-size:12px;cursor:pointer;box-shadow:0 3px 0 #000;font-family:'Cinzel'}
+body{background:#060000;color:#fff;font-family:'Inter';overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 90% at 10% 0%,#DC143C 0%,#8B0000 12%,#1a0000 40%,#000 75%)}
+.bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.9) 100%)}
+.top{position:fixed;top:0;left:0;right:0;z-index:100;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:rgba(10,0,0,0.92);backdrop-filter:blur(20px);border-bottom:1.5px solid rgba(220,20,60,0.4);box-shadow:0 8px 30px rgba(0,0,0,0.8)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;background:linear-gradient(135deg,#DC143C,#8B0000);border-radius:12px;display:grid;place-items:center;color:#fff;font-family:'Cinzel Decorative';font-size:20px;font-weight:900;border:1.5px solid rgba(255,255,255,0.15);box-shadow:0 0 20px rgba(220,20,60,0.5)}
+.brandName{font-family:'Cinzel';font-size:13px;letter-spacing:2px;color:#fff;line-height:1.1}.brandName span{display:block;font-size:9px;letter-spacing:4px;color:#DC143C;font-family:'Inter';font-weight:900}
+.topR{display:flex;gap:10px}
+.iconBtn{width:44px;height:44px;border-radius:13px;border:1px solid rgba(220,20,60,0.25);background:rgba(255,255,255,0.06);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(10px);transition:0.2s}
+.iconBtn:hover{background:rgba(220,20,60,0.15);border-color:#DC143C}
+.iconBtn svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+.primaryBtn{height:44px;padding:0 20px;border-radius:13px;background:linear-gradient(135deg,#DC143C,#8B0000);border:none;color:#fff;font-family:'Cinzel';font-weight:800;font-size:11px;letter-spacing:1px;cursor:pointer;box-shadow:0 0 20px rgba(220,20,60,0.4)}
 
-/* SIDE MENU DRAWER - GOLDEN */
-.sideDrawer{position:fixed;top:0;left:-100%;width:88%;max-width:340px;height:100vh;z-index:300;background:linear-gradient(180deg,#0a0a0a 0%,#1a1500 100%);border-right:5px solid #FFD700;box-shadow:10px 0 40px rgba(0,0,0,0.8),0 0 60px rgba(255,215,0,0.3);transition:0.35s cubic-bezier(0.175,0.885,0.32,1.275);overflow-y:auto;padding-top:70px;padding-bottom:20px}
-.sideDrawer.open{left:0}
-.drawerOverlay{position:fixed;inset:0;z-index:299;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);display:none}
-.drawerOverlay.show{display:block}
-.drawerHeader{padding:14px 16px;border-bottom:2px solid rgba(255,215,0,0.2);display:flex;justify-content:space-between;align-items:center}
-.drawerTitle{font-family:'Cinzel';color:#FFD700;font-size:14px}
-.closeDrawer{width:36px;height:36px;border-radius:12px;border:2px solid #FFD700;background:#000;color:#FFD700;display:grid;place-items:center;cursor:pointer}
-.drawerSection{padding:12px 12px 6px;font-family:'Cinzel';font-size:10px;color:#FFD700;letter-spacing:1.5px;opacity:0.8}
+/* SIDE MENU - SCARLET VANDIMION */
+.drawer{position:fixed;top:0;left:-100%;width:90%;max-width:360px;height:100vh;z-index:500;background:linear-gradient(180deg,#0e0000 0%,#060000 100%);border-right:1px solid rgba(220,20,60,0.3);box-shadow:20px 0 60px rgba(0,0,0,0.9);transition:0.4s cubic-bezier(0.16,1,0.3,1);overflow-y:auto}
+.drawer.open{left:0}
+.overlay{position:fixed;inset:0;z-index:499;background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);display:none}.overlay.show{display:block}
+.dHead{position:sticky;top:0;background:rgba(10,0,0,0.95);backdrop-filter:blur(20px);padding:18px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(220,20,60,0.15);z-index:2}
+.dTitle{font-family:'Cinzel';font-size:13px;letter-spacing:2px;color:#fff}.dTitle i{color:#DC143C;font-style:normal}
+.closeBtn{width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);display:grid;place-items:center;cursor:pointer;color:#fff}
+.dSec{padding:22px 16px 10px;font-family:'Cinzel';font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:10px}.dSec::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(220,20,60,0.3),transparent)}
 
-/* TOOL ITEM IN SIDE MENU - GOLDEN + ANIME CHARACTER */
-.toolSide{height:82px;margin:8px 12px;background:linear-gradient(135deg,#fff 0%,#fff8dc 100%);border:3px solid #000;border-radius:20px;display:flex;align-items:center;gap:10px;padding:0 10px;cursor:pointer;box-shadow:0 4px 0 #000,0 0 15px rgba(255,215,0,0.2);transition:0.15s;position:relative;overflow:hidden}
-.toolSide:active{transform:translateY(4px);box-shadow:none}
-.toolSide::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#FFD700,#FFA500)}
-.toolIconGold{width:56px;height:56px;border-radius:18px;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0;box-shadow:0 3px 0 #000,inset 0 2px 0 rgba(255,255,255,0.5);background:linear-gradient(135deg,#FFD700,#FFA500);position:relative}
-.toolIconGold .animeChar{position:absolute;bottom:-2px;right:-6px;font-size:18px;background:#000;border:2px solid #FFD700;border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
-.toolTextGold{flex:1;min-width:0}
-.toolNameGold{font-family:'Mochiy Pop One';font-size:11px;color:#000;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.toolDescGold{font-size:9px;color:#8a6d00;font-weight:800;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toolRow{margin:8px 12px;height:74px;background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,rgba(255,255,255,0.02) 100%);border:1px solid rgba(255,255,255,0.08);border-radius:16px;display:flex;align-items:center;gap:14px;padding:0 14px;cursor:pointer;transition:0.2s;position:relative;overflow:hidden}
+.toolRow:hover{background:linear-gradient(135deg,rgba(220,20,60,0.12),rgba(255,255,255,0.04));border-color:rgba(220,20,60,0.4);transform:translateX(4px)}
+.toolRow::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#DC143C,#8B0000);opacity:0;transition:0.2s}.toolRow:hover::before{opacity:1}
+.toolIc{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,#1a0000,#2a0000);border:1px solid rgba(220,20,60,0.25);display:grid;place-items:center;flex-shrink:0;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08)}
+.toolIc svg{width:22px;height:22px;stroke:#DC143C;fill:none;stroke-width:1.8}
+.toolTx{flex:1;min-width:0}
+.toolN{font-family:'Inter';font-weight:800;font-size:12.5px;color:#fff;letter-spacing:0.3px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toolD{font-size:10px;color:rgba(255,255,255,0.45);font-weight:600;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-.hero{margin-top:64px;position:relative;min-height:48vh;display:grid;place-items:center;padding:14px}
-#canvas,#genImg{max-width:100%;max-height:58vh;border-radius:28px;border:5px solid #FFD700;box-shadow:0 0 0 3px #000,12px 12px 0 #000,0 20px 50px rgba(255,215,0,0.3);background:#000}
+.hero{margin-top:66px;position:relative;min-height:52vh;display:grid;place-items:center;padding:16px}
+#canvas,#genImg{max-width:100%;max-height:62vh;border-radius:20px;border:1px solid rgba(220,20,60,0.35);box-shadow:0 0 0 1px rgba(0,0,0,0.8),0 20px 60px rgba(0,0,0,0.8),0 0 40px rgba(220,20,60,0.15);background:#000}
 #genImg{display:none}
-.status{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#FFD700,#FFA500);border:3px solid #000;padding:8px 16px;border-radius:100px;font-size:11px;font-weight:900;color:#000;display:flex;gap:8px;z-index:5;box-shadow:0 4px 0 #000;font-family:'Cinzel'}
-.panel{margin:12px;background:linear-gradient(180deg,#fff 0%,#fffaf0 100%);border:4px solid #000;border-radius:28px;padding-bottom:90px;box-shadow:10px 10px 0 #000}
-.handle{width:50px;height:6px;background:#000;border-radius:100px;margin:12px auto;border:1px solid #FFD700}
-.label{font-family:'Cinzel';font-size:11px;color:#000;padding:16px 18px 8px;display:flex;align-items:center;gap:8px}
-.label gold{color:#B8860B}
-.promptWrap{margin:0 12px;background:#fffef5;border:3px solid #000;border-radius:20px;padding:12px;box-shadow:0 4px 0 #000}
-.promptWrap textarea{width:100%;background:transparent;border:none;color:#000;font-size:14px;font-family:'Fredoka';outline:none;resize:none;height:56px;font-weight:700}
-.chips{margin:10px 12px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
-.chip{white-space:nowrap;background:#fff;border:3px solid #000;padding:9px 15px;border-radius:100px;font-size:11px;font-weight:900;color:#000;cursor:pointer;box-shadow:0 3px 0 #000;flex-shrink:0}
-.chip.gold{background:linear-gradient(135deg,#FFD700,#FFA500)}
-.styleScroller{padding:0 12px;display:flex;gap:12px;overflow-x:auto;scrollbar-width:none}
-.styleCard{min-width:90px;height:100px;border-radius:22px;background:#fff;border:3px solid #000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;flex-shrink:0;box-shadow:0 5px 0 #000}
-.styleCard.active{background:linear-gradient(135deg,#FFD700,#FFA500);transform:translateY(-3px) rotate(-2deg);box-shadow:0 8px 0 #000}
-.styleIconBig{width:50px;height:50px;border-radius:16px;border:3px solid #000;display:grid;place-items:center;font-size:28px;box-shadow:0 2px 0 #000}
-.generateBtn{margin:14px 12px 0;width:calc(100% - 24px);background:linear-gradient(135deg,#FFD700,#FFA500);border:4px solid #000;border-radius:20px;height:60px;font-family:'Cinzel';font-size:14px;color:#000;cursor:pointer;box-shadow:0 6px 0 #000;letter-spacing:1px}
+.stat{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.8);backdrop-filter:blur(16px);border:1px solid rgba(220,20,60,0.3);padding:8px 18px;border-radius:100px;font-size:10px;font-weight:800;letter-spacing:1px;color:#fff;display:flex;align-items:center;gap:8px;z-index:5;box-shadow:0 8px 20px rgba(0,0,0,0.5)}
+.dot{width:7px;height:7px;background:#DC143C;border-radius:50%;box-shadow:0 0 10px #DC143C;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
 
-/* SEARCH MODAL - GOLDEN + ANIME */
-.searchModal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.88);backdrop-filter:blur(16px);display:none;padding:16px;padding-top:70px}
-.searchBox{background:linear-gradient(135deg,#fff,#fff8dc);border:4px solid #FFD700;border-radius:20px;display:flex;align-items:center;padding:0 14px;gap:10px;box-shadow:0 0 0 3px #000,0 6px 0 #000}
-.searchBox input{flex:1;background:transparent;border:none;color:#000;padding:16px 0;font-size:15px;font-family:'Fredoka';font-weight:700;outline:none}
-.resultList{margin-top:16px;display:grid;gap:12px;max-height:60vh;overflow-y:auto}
-.resItem{height:84px;background:linear-gradient(135deg,#fff,#fffaf0);border:3px solid #000;border-radius:20px;padding:0 12px;display:flex;align-items:center;gap:12px;cursor:pointer;box-shadow:0 4px 0 #000}
+.panel{margin:14px;background:rgba(12,0,0,0.88);backdrop-filter:blur(24px);border:1px solid rgba(220,20,60,0.18);border-radius:24px;padding-bottom:96px;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.handle{width:36px;height:4px;background:rgba(255,255,255,0.15);border-radius:100px;margin:14px auto}
+.label{font-family:'Cinzel';font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,0.5);padding:18px 18px 10px;display:flex;align-items:center;gap:10px}.label b{color:#DC143C;font-weight:900}
+.promptBox{margin:0 14px;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:14px;transition:0.2s}
+.promptBox:focus-within{border-color:rgba(220,20,60,0.5);box-shadow:0 0 0 3px rgba(220,20,60,0.1)}
+.promptBox textarea{width:100%;background:transparent;border:none;color:#fff;font-size:14px;font-family:'Inter';outline:none;resize:none;height:58px;font-weight:600;line-height:1.5}
+.promptBox textarea::placeholder{color:rgba(255,255,255,0.3)}
+.chips{margin:12px 14px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chip{white-space:nowrap;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:10px 16px;border-radius:100px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);cursor:pointer;flex-shrink:0;transition:0.2s}
+.chip:hover{background:rgba(220,20,60,0.15);color:#fff;border-color:rgba(220,20,60,0.3)}
+.chip.active{background:linear-gradient(135deg,#DC143C,#8B0000);color:#fff;border-color:#DC143C;box-shadow:0 0 15px rgba(220,20,60,0.3)}
+.styleRow{padding:0 14px;display:flex;gap:12px;overflow-x:auto;scrollbar-width:none}
+.styleC{min-width:92px;height:102px;border-radius:18px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;flex-shrink:0;transition:0.2s}
+.styleC.active{background:linear-gradient(135deg,rgba(220,20,60,0.2),rgba(139,0,0,0.2));border-color:#DC143C;transform:translateY(-2px);box-shadow:0 8px 20px rgba(220,20,60,0.2)}
+.styleI{width:44px;height:44px;border-radius:12px;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08);display:grid;place-items:center}
+.styleI svg{width:20px;height:20px;stroke:rgba(255,255,255,0.6)}
+.styleC.active .styleI svg{stroke:#DC143C}
+.genBtn{margin:16px 14px 0;width:calc(100% - 28px);height:56px;background:linear-gradient(135deg,#DC143C 0%,#8B0000 100%);border:none;border-radius:16px;font-family:'Cinzel';font-size:12px;font-weight:900;letter-spacing:2px;color:#fff;cursor:pointer;box-shadow:0 0 30px rgba(220,20,60,0.4),inset 0 1px 0 rgba(255,255,255,0.2);transition:0.2s}
+.genBtn:hover{transform:translateY(-1px);box-shadow:0 0 40px rgba(220,20,60,0.5)}
 
-.bottom{position:fixed;bottom:0;left:0;right:0;z-index:90;background:linear-gradient(180deg,#fff 0%,#fff8dc 100%);border-top:4px solid #000;padding:8px 6px 14px;display:flex;justify-content:space-around;box-shadow:0 -6px 20px rgba(0,0,0,0.3)}
-.bItem{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px;border-radius:16px;cursor:pointer;color:#999;border:2px solid transparent}
-.bItem.active{background:linear-gradient(135deg,#FFD700,#FFA500);border:3px solid #000;color:#000;box-shadow:0 3px 0 #000;transform:translateY(-6px)}
-.bItem.bt{font-size:8px;font-weight:900;font-family:'Cinzel'}
-#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(255,255,255,0.94);z-index:30;border-radius:28px}
-.runTrack{width:300px;height:100px;position:relative;background:linear-gradient(135deg,#fff,#fff8dc);border:4px solid #000;border-radius:100px;overflow:hidden;box-shadow:8px 8px 0 #000}
-.runBg{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#fff 0px,#fff 20px,#FFD700 20px,#FFD700 40px);animation:bgmove 0.5s linear infinite}
-@keyframes bgmove{to{transform:translateX(40px)}}
-/* REAL ANIME GIRL GOLDEN */
-.runner-real{position:absolute;left:0;top:50%;width:76px;height:88px;transform:translateY(-50%);animation:runReal 1.2s linear infinite}
-@keyframes runReal{0%{left:-10px}100%{left:220px}}
-.animeGirl{width:100%;height:100%;position:relative}
-.hair{position:absolute;top:0;left:10px;width:54px;height:40px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:50% 50% 30% 30%;border:3px solid #000;z-index:2}
-.hair::after{content:'👑';position:absolute;top:-8px;right:-6px;font-size:16px}
-.face{position:absolute;top:24px;left:19px;width:36px;height:30px;background:#ffdbac;border:3px solid #000;border-radius:50%;z-index:1}
-.eye{position:absolute;top:8px;width:7px;height:10px;background:#000;border-radius:50%}.eye.l{left:6px}.eye.r{right:6px}
-.eye::after{content:'';position:absolute;top:2px;left:1px;width:2px;height:2px;background:#FFD700;border-radius:50%}
-.cheek{position:absolute;top:16px;width:7px;height:4px;background:#ff8fab;border-radius:50%}.cheek.l{left:2px}.cheek.r{right:2px}
-.body{position:absolute;top:52px;left:22px;width:28px;height:20px;background:linear-gradient(135deg,#FFD700,#B8860B);border:3px solid #000;border-radius:10px 10px 4px 4px;z-index:1}
-.leg{position:absolute;top:70px;width:9px;height:20px;background:#ffdbac;border:2px solid #000;border-radius:0 0 8px 8px;transform-origin:top}
-.leg.l{left:24px;animation:legRun 0.25s infinite alternate}.leg.r{left:40px;animation:legRun 0.25s infinite alternate-reverse}
-@keyframes legRun{0%{transform:rotate(-25deg)}100%{transform:rotate(25deg)}}
-.arm{position:absolute;top:54px;width:9px;height:16px;background:#ffdbac;border:2px solid #000;border-radius:6px;transform-origin:top}
-.arm.l{left:13px;animation:armRun 0.25s infinite alternate-reverse}.arm.r{right:11px;animation:armRun 0.25s infinite alternate}
-@keyframes armRun{0%{transform:rotate(-35deg)}100%{transform:rotate(35deg)}}
+/* SEARCH - SCARLET */
+.searchM{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.88);backdrop-filter:blur(24px);display:none;padding:16px;padding-top:72px}
+.sBox{background:rgba(15,0,0,0.9);border:1px solid rgba(220,20,60,0.3);border-radius:16px;display:flex;align-items:center;padding:0 16px;gap:12px;box-shadow:0 10px 40px rgba(0,0,0,0.8)}
+.sBox input{flex:1;background:transparent;border:none;color:#fff;padding:18px 0;font-size:15px;font-family:'Inter';font-weight:600;outline:none}
+.sBox input::placeholder{color:rgba(255,255,255,0.3)}
+.resList{margin-top:16px;display:grid;gap:10px;max-height:62vh;overflow-y:auto}
+
+.bottom{position:fixed;bottom:0;left:0;right:0;z-index:90;background:rgba(8,0,0,0.92);backdrop-filter:blur(20px);border-top:1px solid rgba(220,20,60,0.15);padding:10px 8px 14px;display:flex;justify-content:space-around}
+.bItem{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 2px;border-radius:14px;cursor:pointer;color:rgba(255,255,255,0.4);transition:0.2s}
+.bItem svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}
+.bItem.active{color:#fff;background:rgba(220,20,60,0.12);border:1px solid rgba(220,20,60,0.25)}
+.bItem.active svg{stroke:#DC143C}
+.bTxt{font-size:8px;font-weight:900;letter-spacing:1px;font-family:'Inter'}
+
+#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);z-index:30;border-radius:20px}
+.loadBox{width:300px;height:4px;background:rgba(255,255,255,0.08);border-radius:100px;overflow:hidden;position:relative}
+.loadBar{position:absolute;left:0;top:0;bottom:0;width:60%;background:linear-gradient(90deg,#DC143C,#8B0000);border-radius:100px;animation:load 1.2s ease-in-out infinite;box-shadow:0 0 15px #DC143C}
+@keyframes load{0%{left:-60%}100%{left:100%}}
+.loadT{margin-top:18px;text-align:center;font-family:'Cinzel';font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.6)}
 #file{display:none}
-.sliderWrap{margin:0 12px 12px;background:#fffef5;border:3px solid #000;border-radius:18px;padding:14px;box-shadow:0 4px 0 #000}
-input[type=range]{width:100%;accent-color:#FFD700;height:10px}
+.sliderBox{margin:0 14px 12px;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:14px}
+input[type=range]{width:100%;accent-color:#DC143C;height:4px}
+.grid2{padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 </style>
 </head>
 <body>
-<div class="goldBg"></div>
+<div class="bg"></div>
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="drawer" id="drawer">
+<div class="dHead"><div class="dTitle">SCARLET <i>VANDIMION</i></div><div class="closeBtn" onclick="toggleMenu()">✕</div></div>
 
-<!-- DRAWER OVERLAY -->
-<div class="drawerOverlay" id="drawerOverlay" onclick="toggleMenu()"></div>
+<div class="dSec">AI STUDIO</div>
+<div class="toolRow" onclick="ai('bgremove');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M10 13a2 2 0 1 0 4 2 2 0 0 0 0-4z"/><path d="M21 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M10 15l5 0"/><path d="M21 15l-5 0"/></svg></div><div class="toolTx"><div class="toolN">Background Remove</div><div class="toolD">AI cut • Transparent • 8K</div></div></div>
+<div class="toolRow" onclick="ai('bgblur');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div><div class="toolTx"><div class="toolN">Bokeh Blur</div><div class="toolD">Depth • Portrait • Scarlet</div></div></div>
+<div class="toolRow" onclick="ai('enhance');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="toolTx"><div class="toolN">HD Enhance 8K</div><div class="toolD">Upscale • Sharpen • Vandimion</div></div></div>
+<div class="toolRow" onclick="ai('upscale');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg></div><div class="toolTx"><div class="toolN">Upscale 4x</div><div class="toolD">Super resolution • Ultra HD</div></div></div>
+<div class="toolRow" onclick="ai('cartoon');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><div class="toolTx"><div class="toolN">Cartoon AI</div><div class="toolD">Toon • Scarlet style</div></div></div>
+<div class="toolRow" onclick="ai('anime');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.69 12"/><path d="M12 12l5.5-9.5"/></svg></div><div class="toolTx"><div class="toolN">Anime AI</div><div class="toolD">Manga • Vandimion gothic</div></div></div>
 
-<!-- SIDE MENU DRAWER - GOLDEN 8K -->
-<div class="sideDrawer" id="sideDrawer">
-<div class="drawerHeader"><div class="drawerTitle">👑 8K GOLDEN TOOLS</div><button class="closeDrawer" onclick="toggleMenu()">✕</button></div>
+<div class="dSec">FILTERS • SCARLET COLLECTION</div>
+<div class="toolRow" onclick="applyF('vintage');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M8 11l2 2 4-4"/><path d="M2 12h20"/></svg></div><div class="toolTx"><div class="toolN">Vintage Film</div><div class="toolD">90s • Grain • Scarlet</div></div></div>
+<div class="toolRow" onclick="applyF('cyber');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg></div><div class="toolTx"><div class="toolN">Cyberpunk</div><div class="toolD">Neon • Night • Blood</div></div></div>
+<div class="toolRow" onclick="applyF('sakura');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6c-2 2-4 3-4 6s2 4 4 4 4-1 4-4-2-4-4-6z"/></svg></div><div class="toolTx"><div class="toolN">Sakura Noir</div><div class="toolD">Pink • Dark • Elegant</div></div></div>
+<div class="toolRow" onclick="applyF('glitch');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div><div class="toolTx"><div class="toolN">Glitch 8K</div><div class="toolD">Error • Vandimion core</div></div></div>
 
-<div class="drawerSection">🤖 AI STUDIO - EACH TOOL ANIME CHARACTER</div>
-<div class="toolSide" onclick="ai('bgremove'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#FFD700,#FFA500)">✂️<div class="animeChar">👧</div></div><div class="toolTextGold"><div class="toolNameGold">BG Remove</div><div class="toolDescGold">Anime girl cutting bg</div></div></div>
-<div class="toolSide" onclick="ai('bgblur'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#7dd3fc,#0ea5e9)">🌸<div class="animeChar">🌸</div></div><div class="toolTextGold"><div class="toolNameGold">Bokeh Blur</div><div class="toolDescGold">Sakura anime girl</div></div></div>
-<div class="toolSide" onclick="ai('enhance'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#ffde59,#f59e0b)">💎<div class="animeChar">👸</div></div><div class="toolTextGold"><div class="toolNameGold">HD 8K Enhance</div><div class="toolDescGold">Golden princess</div></div></div>
-<div class="toolSide" onclick="ai('upscale'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#a7f3d0,#10b981)">🔍<div class="animeChar">🔎</div></div><div class="toolTextGold"><div class="toolNameGold">Upscale 8K</div><div class="toolDescGold">Detective anime</div></div></div>
-<div class="toolSide" onclick="ai('cartoon'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">🎭<div class="animeChar">🎨</div></div><div class="toolTextGold"><div class="toolNameGold">Cartoon AI</div><div class="toolDescGold">Artist anime boy</div></div></div>
-<div class="toolSide" onclick="ai('anime'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#c4b5fd,#8b5cf6)">🎌<div class="animeChar">👘</div></div><div class="toolTextGold"><div class="toolNameGold">Anime AI</div><div class="toolDescGold">Kimono anime girl</div></div></div>
-<div class="toolSide" onclick="ai('smooth'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#fdba74,#f97316)">✨<div class="animeChar">💖</div></div><div class="toolTextGold"><div class="toolNameGold">Smooth Skin</div><div class="toolDescGold">Kawaii beauty girl</div></div></div>
-<div class="toolSide" onclick="ai('colorize'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#86efac,#22c55e)">🌈<div class="animeChar">🌟</div></div><div class="toolTextGold"><div class="toolNameGold">Color Pop 8K</div><div class="toolDescGold">Rainbow anime</div></div></div>
-
-<div class="drawerSection">🎨 FILTERS - EACH FILTER ANIME CHARACTER</div>
-<div class="toolSide" onclick="applyF('vintage'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">📼<div class="animeChar">👓</div></div><div class="toolTextGold"><div class="toolNameGold">Vintage 90s</div><div class="toolDescGold">Retro anime girl</div></div></div>
-<div class="toolSide" onclick="applyF('cyber'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#06b6d4,#0891b2)">🌃<div class="animeChar">🤖</div></div><div class="toolTextGold"><div class="toolNameGold">Cyberpunk</div><div class="toolDescGold">Cyber anime girl</div></div></div>
-<div class="toolSide" onclick="applyF('sakura'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#fbcfe8,#f472b6)">🌸<div class="animeChar">🌸</div></div><div class="toolTextGold"><div class="toolNameGold">Sakura Pink</div><div class="toolDescGold">Cherry blossom girl</div></div></div>
-<div class="toolSide" onclick="applyF('glitch'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#ff6ec7,#ec4899)">💥<div class="animeChar">⚡</div></div><div class="toolTextGold"><div class="toolNameGold">Glitch 8K</div><div class="toolDescGold">Glitch anime boy</div></div></div>
-<div class="toolSide" onclick="applyF('neon'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#fde047,#eab308)">💡<div class="animeChar">💫</div></div><div class="toolTextGold"><div class="toolNameGold">Neon Glow</div><div class="toolDescGold">Neon anime girl</div></div></div>
-
-<div class="drawerSection">⚙️ BASIC - EACH TOOL ANIME CHARACTER</div>
-<div class="toolSide" onclick="basic('rotate90'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#bfdbfe,#3b82f6)">↻<div class="animeChar">🌀</div></div><div class="toolTextGold"><div class="toolNameGold">Rotate 8K</div><div class="toolDescGold">Spinning anime</div></div></div>
-<div class="toolSide" onclick="basic('fliph'); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#ddd6fe,#7c3aed)">↔<div class="animeChar">🪞</div></div><div class="toolTextGold"><div class="toolNameGold">Flip Mirror</div><div class="toolDescGold">Mirror anime</div></div></div>
-<div class="toolSide" onclick="addText(); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#a7f3d0,#059669)">✏️<div class="animeChar">📝</div></div><div class="toolTextGold"><div class="toolNameGold">Golden Text</div><div class="toolDescGold">Writer anime girl</div></div></div>
-<div class="toolSide" onclick="toggleDraw(); toggleMenu();"><div class="toolIconGold" style="background:linear-gradient(135deg,#fde68a,#d97706)">🎨<div class="animeChar">🖌️</div></div><div class="toolTextGold"><div class="toolNameGold">Oekaki Draw</div><div class="toolDescGold">Painter anime</div></div></div>
+<div class="dSec">BASIC • PRO</div>
+<div class="toolRow" onclick="basic('rotate90');toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8V3h-5l2.26 2.26A7 7 0 1 0 21 12z"/></svg></div><div class="toolTx"><div class="toolN">Rotate • Flip</div><div class="toolD">90° • Mirror • Pro</div></div></div>
+<div class="toolRow" onclick="addText();toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M4 6h16"/><path d="M12 6v12"/></svg></div><div class="toolTx"><div class="toolN">Typography</div><div class="toolD">Cinzel • Scarlet text</div></div></div>
+<div class="toolRow" onclick="toggleDraw();toggleMenu()"><div class="toolIc"><svg viewBox="0 0 24 24"><path d="M12 19l7-7a2 2 0 0 0 0-3l-2-2a2 2 0 0 0-3 0l-7 7v5h5z"/><path d="M5 19h14"/></svg></div><div class="toolTx"><div class="toolN">Oekaki Draw</div><div class="toolD">Brush • Blood ink</div></div></div>
 </div>
 
-<div class="topbar">
-<div style="display:flex;gap:8px;align-items:center">
-<button class="menuBtn" onclick="toggleMenu()">☰</button>
-<div class="brand"><div class="logoA">A</div>8K GOLDEN ANIME 👑</div>
-</div>
-<div style="display:flex;gap:8px"><button class="kBtn" onclick="openSearch()">🔍</button><button class="hdBtn" onclick="downloadAll()">⬇ 8K HD</button></div>
+<div class="top">
+<div class="brand"><div class="logo">A</div><div class="brandName">AETHER<span>SCARLET VANDIMION</span></div><div style="width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);display:grid;place-items:center;cursor:pointer;margin-left:8px" onclick="toggleMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div></div>
+<div class="topR"><button class="iconBtn" onclick="openSearch()"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-3.5-3.5"/></svg></button><button class="primaryBtn" onclick="downloadAll()">⬇ 8K HD</button></div>
 </div>
 
-<div class="searchModal" id="searchModal">
-<div class="searchBox"><span style="font-size:22px">👑</span><input id="searchInput" placeholder="Search golden anime tools... bg remove, sakura, glitch..." oninput="doSearch(this.value)"><button class="kBtn" style="width:36px;height:36px" onclick="closeSearch()">✕</button></div>
-<div class="resultList" id="resultList"></div>
+<div class="searchM" id="searchM">
+<div class="sBox"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-3.5-3.5"/></svg><input id="sInput" placeholder="Search Scarlet tools... bg remove, bokeh, glitch..." oninput="doSearch(this.value)"><div style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:grid;place-items:center;cursor:pointer" onclick="closeSearch()">✕</div></div>
+<div class="resList" id="resList"></div>
 </div>
 
 <div class="hero">
-<img id="genImg"/><canvas id="canvas" width="1200" height="1200"></canvas>
-<div class="status"><span id="st">👑 8K Golden • Ultra HD • Anime King</span></div>
-<div id="loader"><div style="position:relative"><div class="runTrack"><div class="runBg"></div><div class="runner-real"><div class="animeGirl"><div class="hair"></div><div class="face"><div class="eye l"></div><div class="eye r"></div><div class="cheek l"></div><div class="cheek r"></div></div><div class="arm l"></div><div class="arm r"></div><div class="body"></div><div class="leg l"></div><div class="leg r"></div></div></div></div><div style="position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);background:#000;border:3px solid #FFD700;color:#FFD700;padding:8px 16px;border-radius:100px;font-family:'Cinzel';font-size:11px;white-space:nowrap;box-shadow:0 3px 0 #000">👑 Golden Anime Girl Running 8K...</div></div></div>
+<img id="genImg"/><canvas id="canvas" width="1400" height="1400"></canvas>
+<div class="stat"><div class="dot"></div><span id="st">SCARLET VANDIMION • 8K • PROFESSIONAL</span></div>
+<div id="loader"><div><div class="loadBox"><div class="loadBar"></div></div><div class="loadT">SCARLET VANDIMION RENDERING • 8K</div></div></div>
 </div>
 
 <div class="panel">
 <div class="handle"></div>
 <div id="tab-gen">
-<div class="label">✨ <gold>What to create?</gold> 🎨 8K</div>
-<div class="promptWrap"><textarea id="prompt" placeholder="Golden anime girl 8k ultra hd, kawaii princess golden crown, breakup sad boy rain golden hour..."></textarea></div>
+<div class="label"><b>✦</b> PROMPT • SCARLET VANDIMION</div>
+<div class="promptBox"><textarea id="prompt" placeholder="Scarlet Vandimion gothic vampire girl, crimson eyes, black dress, blood moon, ultra hd 8k, cinematic lighting..."></textarea></div>
 <div class="chips">
-<div class="chip gold" onclick="setP('Golden anime princess 8k ultra hd kawaii pink hair golden crown ultra detailed')">👑 Golden Princess</div>
-<div class="chip" onclick="setP('Tamil boy anime 8k golden hour heartbreak rain night city neon sad ultra hd')">💔 Golden Hour</div>
-<div class="chip gold" onclick="setP('Lord Murugan anime divine 8k ultra hd golden fire aura powerful')">🔥 Golden Murugan</div>
-<div class="chip" onclick="setP('Chibi Thala Dhoni CSK cute golden 8k')">🏏 Golden Dhoni</div>
+<div class="chip active" onclick="setP('Scarlet Vandimion gothic vampire queen, crimson eyes, black velvet dress, blood moon, ultra hd 8k, cinematic, elegant',this)">🌹 Scarlet Queen</div>
+<div class="chip" onclick="setP('Vampire boy scarlet eyes, black suit, gothic castle, blood moon, ultra professional 8k',this)">🩸 Vampire Boy</div>
+<div class="chip" onclick="setP('Gothic princess scarlet vandimion style, dark elegant, crimson rose, ultra hd 8k professional',this)">👑 Gothic Princess</div>
+<div class="chip" onclick="setP('Dark academia scarlet, black dress, candle light, ultra hd',this)">🕯️ Dark Academia</div>
 </div>
-<div class="label">🎨 Anime Styles - Golden 8K</div>
-<div class="styleScroller" id="styleRow">
-<div class="styleCard active" data-s="anime, kawaii, studio ghibli, ultra hd 8k, golden hour, ultra detailed, golden light"><div class="styleIconBig" style="background:linear-gradient(135deg,#FFD700,#FFA500)">👑</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Golden 8K</div></div>
-<div class="styleCard" data-s="anime, cyberpunk, neon city, 8k ultra hd, golden neon"><div class="styleIconBig" style="background:linear-gradient(135deg,#7dd3fc,#0ea5e9)">🌃</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Cyber Gold</div></div>
-<div class="styleCard" data-s="shojo anime, sparkles, magical girl, golden sparkles, 8k"><div class="styleIconBig" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">💖</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Shojo Gold</div></div>
-<div class="styleCard" data-s="chibi, cute, small, golden hour, 8k"><div class="styleIconBig" style="background:linear-gradient(135deg,#ffde59,#f59e0b)">😍</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Chibi Gold</div></div>
-</div>
-<button class="generateBtn" onclick="genAI()">👑 GENERATE 8K GOLDEN ANIME ✨</button>
-</div>
-
-<div id="tab-ai" style="display:none">
-<div class="label">🤖 AI Tools - Golden 8K</div>
-<div style="padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<div class="toolSide" onclick="ai('bgremove')"><div class="toolIconGold" style="background:linear-gradient(135deg,#FFD700,#FFA500)">✂️<div class="animeChar">👧</div></div><div class="toolTextGold"><div class="toolNameGold">BG Remove</div><div class="toolDescGold">Anime girl cutting</div></div></div>
-<div class="toolSide" onclick="ai('enhance')"><div class="toolIconGold" style="background:linear-gradient(135deg,#ffde59,#f59e0b)">💎<div class="animeChar">👸</div></div><div class="toolTextGold"><div class="toolNameGold">HD 8K Enhance</div><div class="toolDescGold">Golden princess</div></div></div>
-<div class="toolSide" onclick="ai('bgblur')"><div class="toolIconGold" style="background:linear-gradient(135deg,#7dd3fc,#0ea5e9)">🌸<div class="animeChar">🌸</div></div><div class="toolTextGold"><div class="toolNameGold">Bokeh Blur</div><div class="toolDescGold">Sakura girl</div></div></div>
-<div class="toolSide" onclick="ai('cartoon')"><div class="toolIconGold" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">🎭<div class="animeChar">🎨</div></div><div class="toolTextGold"><div class="toolNameGold">Cartoon AI</div><div class="toolDescGold">Artist boy</div></div></div>
-</div>
-</div>
-<div id="tab-adjust" style="display:none"><div class="label">⚙️ Adjust Golden</div><div id="sliders"></div></div>
-<div id="tab-filter" style="display:none"><div class="label">🌈 Filters Golden 8K</div><div style="padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px" id="fGrid"></div></div>
-<div id="tab-more" style="display:none">
-<div class="label">💥 More Golden Magic</div>
-<div style="padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<div class="toolSide" onclick="applyF('glitch')"><div class="toolIconGold" style="background:linear-gradient(135deg,#ff6ec7,#ec4899)">💥<div class="animeChar">⚡</div></div><div class="toolTextGold"><div class="toolNameGold">Glitch 8K</div><div class="toolDescGold">Glitch boy</div></div></div>
-<div class="toolSide" onclick="applyF
+<div class="label"><b>✦</b> STYLE • VANDIMION COLLECTION</div>
+<div class="styleRow" id="styleRow">
+<div class="styleC active" data-s="scarlet vandimion, gothic vampire, crimson, black dress, ultra hd 8k, cinematic lighting, elegant, professional"><div class="styleI"><svg viewBox="0 0 24 24" fill="none" stroke="#DC143C" stroke-width="1.8"><path d="M12 2L13.5 8.5H20L14.75 12.5L16.25 19L12 14.75L7.75 19L9.25 12.5L4 8.5H10.5L12 2Z"/></svg></div><div style="font-family:'Cinzel';font-size:9px;color:#fff;letter-spacing:1px">SCARLET</div></div>
+<div class="styleC" data-s="gothic noir, black and crimson, vampire elegant, ultra hd 8k"><div class="styleI"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.8"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6c-1 1-2 2-2 4s1 3 2 3 2-1 2-3-1-3-2-4z"/></svg></div><div style="font-family:'Cinzel';font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:1px">NOIR</div></div>
+<div class="styleC" data-s="blood moon, crimson, dark fantasy
