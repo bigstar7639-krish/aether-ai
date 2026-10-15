@@ -4,179 +4,150 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="monetag" content="885decdd14aefd3c726f3b189e29c0bf">
 <script src="https://5gvci.com/act/files/tag.min.js?z=12037972" data-cfasync="false" async></script>
-<title>Aether • Anime World Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<title>Aether Anime - BIG Icons</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0614;color:#fff;font-family:'Fredoka',system-ui;overflow-x:hidden}
-/* ANIME GRADIENT BG */
-.animeBg{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 80% at 20% 10%,#ff6ec7 0%,#a855f7 25%,#7c3aed 50%,#0a0614 100%);opacity:0.9}
-.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);border-bottom:3px solid #ff6ec7;box-shadow:0 4px 20px rgba(255,110,199,0.3)}
-.brand{font-family:'Mochiy Pop One';font-size:14px;color:#0a0614;display:flex;align-items:center;gap:8px}
-.brand.logo{width:32px;height:32px;background:linear-gradient(135deg,#ff6ec7,#7c3aed);border-radius:10px;display:grid;place-items:center;color:#fff;font-size:18px;transform:rotate(-5deg);box-shadow:0 4px 0 #0a0614}
-.brand span{color:#ff6ec7}
-.actions{display:flex;gap:8px}
-.kawaiiBtn{width:42px;height:42px;border-radius:14px;border:3px solid #0a0614;background:#fff;display:grid;place-items:center;font-size:18px;cursor:pointer;box-shadow:0 3px 0 #0a0614;transition:0.1s}
-.kawaiiBtn:active{transform:translateY(3px);box-shadow:none}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#0a0614;color:#fff;font-family:'Fredoka'}
+.animeBg{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 80% at 20% 10%,#ff6ec7 0%,#a855f7 25%,#7c3aed 50%,#0a0614 100%)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#fff;border-bottom:4px solid #0a0614}
+.brand{font-family:'Mochiy Pop One';font-size:13px;color:#0a0614;display:flex;align-items:center;gap:8px}
+.logoA{width:34px;height:34px;background:linear-gradient(135deg,#ff6ec7,#7c3aed);border-radius:11px;display:grid;place-items:center;color:#fff;font-size:19px;border:2px solid #0a0614;box-shadow:0 3px 0 #0a0614}
+.kBtn{width:42px;height:42px;border-radius:14px;border:3px solid #0a0614;background:#fff;display:grid;place-items:center;font-size:20px;cursor:pointer;box-shadow:0 3px 0 #0a0614}
 .hdBtn{padding:8px 16px;border-radius:14px;background:#ffde59;border:3px solid #0a0614;color:#0a0614;font-weight:800;font-size:12px;cursor:pointer;box-shadow:0 3px 0 #0a0614}
-.hero{margin-top:60px;position:relative;min-height:58vh;display:grid;place-items:center;padding:16px}
-#canvas,#genImg{max-width:100%;max-height:60vh;border-radius:28px;border:4px solid #fff;box-shadow:8px 8px 0 #0a0614,0 20px 40px rgba(0,0,0,0.4);background:#000}
+.hero{margin-top:60px;position:relative;min-height:48vh;display:grid;place-items:center;padding:16px}
+#canvas,#genImg{max-width:100%;max-height:58vh;border-radius:28px;border:4px solid #fff;box-shadow:8px 8px 0 #0a0614;background:#000}
 #genImg{display:none}
-.status{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;border:3px solid #0a0614;padding:8px 16px;border-radius:100px;font-size:11px;font-weight:800;color:#0a0614;display:flex;gap:8px;align-items:center;z-index:5;box-shadow:0 4px 0 #0a0614}
-.dot{width:10px;height:10px;background:#22c55e;border-radius:50%;border:2px solid #0a0614;animation:pop 1s infinite}
-@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.status{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:#fff;border:3px solid #0a0614;padding:8px 16px;border-radius:100px;font-size:11px;font-weight:800;color:#0a0614;box-shadow:0 4px 0 #0a0614;z-index:5}
 .panel{margin:12px;background:#fff;border:4px solid #0a0614;border-radius:28px;padding-bottom:90px;box-shadow:8px 8px 0 #0a0614}
 .handle{width:48px;height:6px;background:#0a0614;border-radius:100px;margin:12px auto}
-.label{font-family:'Mochiy Pop One';font-size:12px;color:#7c3aed;padding:16px 18px 8px;display:flex;align-items:center;gap:8px}
-.label i{background:linear-gradient(135deg,#ff6ec7,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:normal}
+.label{font-family:'Mochiy Pop One';font-size:12px;color:#7c3aed;padding:16px 18px 8px}
 .promptWrap{margin:0 12px;background:#fef3ff;border:3px solid #0a0614;border-radius:20px;padding:12px;box-shadow:0 4px 0 #0a0614}
-.promptWrap textarea{width:100%;background:transparent;border:none;color:#0a0614;font-size:14px;font-family:'Fredoka';outline:none;resize:none;height:56px;font-weight:600}
-.promptWrap textarea::placeholder{color:#c4a1d6}
+.promptWrap textarea{width:100%;background:transparent;border:none;color:#0a0614;font-size:14px;font-family:'Fredoka';outline:none;resize:none;height:56px;font-weight:700}
 .chips{margin:10px 12px 0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
-.chip{white-space:nowrap;background:#fff;border:3px solid #0a0614;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:800;color:#0a0614;cursor:pointer;box-shadow:0 3px 0 #0a0614;flex-shrink:0}
-.chip:active{transform:translateY(3px);box-shadow:none}
+.chip{white-space:nowrap;background:#fff;border:3px solid #0a0614;padding:9px 15px;border-radius:100px;font-size:11px;font-weight:800;color:#0a0614;cursor:pointer;box-shadow:0 3px 0 #0a0614;flex-shrink:0}
 .chip.pink{background:#ff6ec7;color:#fff}.chip.yellow{background:#ffde59}.chip.purple{background:#a855f7;color:#fff}
-.styleScroller{padding:0 12px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
-.styleCard{min-width:80px;height:92px;border-radius:20px;background:#fff;border:3px solid #0a0614;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;flex-shrink:0;box-shadow:0 4px 0 #0a0614;transition:0.1s}
-.styleCard:active{transform:translateY(4px);box-shadow:none}
-.styleCard.active{background:#ffde59;transform:translateY(-4px) rotate(-2deg);box-shadow:0 8px 0 #0a0614}
-.styleCard.ic{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;font-size:22px;border:2px solid #0a0614}.styleCard.nm{font-size:11px;font-weight:800;color:#0a0614}
-.generateBtn{margin:14px 12px 0;width:calc(100% - 24px);background:linear-gradient(135deg,#ff6ec7,#7c3aed);border:3px solid #0a0614;border-radius:20px;height:56px;font-family:'Mochiy Pop One';font-size:14px;color:#fff;cursor:pointer;box-shadow:0 5px 0 #0a0614;display:flex;align-items:center;justify-content:center;gap:10px}
-.generateBtn:active{transform:translateY(5px);box-shadow:none}
-.toolGrid{padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tool{height:72px;background:#fff;border:3px solid #0a0614;border-radius:20px;display:flex;align-items:center;gap:12px;padding:0 12px;cursor:pointer;box-shadow:0 4px 0 #0a0614;transition:0.1s}
-.tool:active{transform:translateY(4px);box-shadow:none}
-.tool.ico{width:44px;height:44px;border-radius:14px;border:2px solid #0a0614;display:grid;place-items:center;font-size:22px;flex-shrink:0}
-.tool:nth-child(1).ico{background:#ff6ec7}.tool:nth-child(2).ico{background:#ffde59}.tool:nth-child(3).ico{background:#7dd3fc}.tool:nth-child(4).ico{background:#a7f3d0}.tool:nth-child(5).ico{background:#fca5a5}.tool:nth-child(6).ico{background:#c4b5fd}.tool:nth-child(7).ico{background:#fdba74}.tool:nth-child(8).ico{background:#86efac}
-.tool.t b{font-size:12px;color:#0a0614;display:block;font-family:'Mochiy Pop One';font-weight:400;font-size:11px}.tool.t span{font-size:10px;color:#7c5a8a;font-weight:700}
-.sliderWrap{margin:0 12px 12px;background:#fef3ff;border:3px solid #0a0614;border-radius:18px;padding:14px;box-shadow:0 4px 0 #0a0614}
-.sliderWrap.row{display:flex;justify-content:space-between;font-family:'Mochiy Pop One';font-size:10px;color:#0a0614;margin-bottom:8px}
-input[type=range]{width:100%;accent-color:#ff6ec7;height:8px}
-.bottom{position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;border-top:4px solid #0a0614;padding:8px 6px max(8px,env(safe-area-inset-bottom));display:flex;justify-content:space-around;box-shadow:0 -8px 0 rgba(0,0,0,0.1)}
-.bItem{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-radius:16px;cursor:pointer;color:#9ca3af;transition:0.15s;border:2px solid transparent}
+.styleScroller{padding:0 12px;display:flex;gap:12px;overflow-x:auto;scrollbar-width:none}
+.styleCard{min-width:86px;height:96px;border-radius:22px;background:#fff;border:3px solid #0a0614;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;flex-shrink:0;box-shadow:0 4px 0 #0a0614}
+.styleCard.active{background:#ffde59;transform:translateY(-3px) rotate(-2deg);box-shadow:0 7px 0 #0a0614}
+.styleIconBig{width:48px;height:48px;border-radius:16px;border:3px solid #0a0614;display:grid;place-items:center;font-size:28px;box-shadow:0 2px 0 #0a0614}
+.generateBtn{margin:14px 12px 0;width:calc(100% - 24px);background:linear-gradient(135deg,#ff6ec7,#7c3aed);border:3px solid #0a0614;border-radius:20px;height:58px;font-family:'Mochiy Pop One';font-size:14px;color:#fff;cursor:pointer;box-shadow:0 5px 0 #0a0614}
+
+/* BIG ICONS - FIXED */
+.toolGrid{padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.toolCard{height:84px;background:#fff;border:3px solid #0a0614;border-radius:22px;display:flex;align-items:center;gap:12px;padding:0 12px;cursor:pointer;box-shadow:0 5px 0 #0a0614;transition:0.1s}
+.toolCard:active{transform:translateY(5px);box-shadow:none}
+.toolIcon{width:56px;height:56px;border-radius:18px;border:3px solid #0a0614;display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;box-shadow:0 3px 0 #0a0614, inset 0 2px 0 rgba(255,255,255,0.4);background:linear-gradient(135deg,#ffde59,#ffb700)}
+.toolText{flex:1;min-width:0}
+.toolName{font-family:'Mochiy Pop One';font-size:12px;color:#0a0614;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toolDesc{font-size:10px;color:#6b4c7a;font-weight:700;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.bottom{position:fixed;bottom:0;left:0;right:0;z-index:90;background:#fff;border-top:4px solid #0a0614;padding:8px 6px 14px;display:flex;justify-content:space-around}
+.bItem{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px;border-radius:16px;cursor:pointer;color:#999;border:2px solid transparent}
 .bItem.active{background:#ffde59;border:3px solid #0a0614;color:#0a0614;box-shadow:0 3px 0 #0a0614;transform:translateY(-6px)}
-.bItem.bi{font-size:20px}.bItem.bt{font-size:8px;font-weight:800;font-family:'Mochiy Pop One'}
-.searchModal{position:fixed;inset:0;z-index:200;background:rgba(10,6,20,0.85);backdrop-filter:blur(16px);display:none;padding:16px;padding-top:70px}
+.bItem.bt{font-size:8px;font-weight:800;font-family:'Mochiy Pop One'}
+.searchModal{position:fixed;inset:0;z-index:200;background:rgba(10,6,20,0.88);backdrop-filter:blur(16px);display:none;padding:16px;padding-top:70px}
 .searchBox{background:#fff;border:4px solid #0a0614;border-radius:20px;display:flex;align-items:center;padding:0 14px;gap:10px;box-shadow:0 6px 0 #0a0614}
 .searchBox input{flex:1;background:transparent;border:none;color:#0a0614;padding:16px 0;font-size:15px;font-family:'Fredoka';font-weight:700;outline:none}
 .resultList{margin-top:16px;display:grid;gap:10px;max-height:60vh;overflow-y:auto}
 .resItem{background:#fff;border:3px solid #0a0614;border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;box-shadow:0 4px 0 #0a0614}
-
-/* ANIME LOADING - RUNNING CHARACTER */
-#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);z-index:30;border-radius:28px}
-.runTrack{width:280px;height:100px;position:relative;background:#fff;border:4px solid #0a0614;border-radius:100px;overflow:hidden;box-shadow:8px 8px 0 #0a0614}
+#loader{position:absolute;inset:0;display:none;place-items:center;background:rgba(255,255,255,0.92);z-index:30;border-radius:28px}
+.runTrack{width:280px;height:90px;position:relative;background:#fff;border:4px solid #0a0614;border-radius:100px;overflow:hidden;box-shadow:8px 8px 0 #0a0614}
 .runBg{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#fef3ff 0px,#fef3ff 20px,#ffde59 20px,#ffde59 40px);animation:bgmove 0.5s linear infinite}
 @keyframes bgmove{to{transform:translateX(40px)}}
-.runner{position:absolute;left:20px;top:50%;transform:translateY(-50%);font-size:48px;animation:run 0.6s infinite alternate,moveX 1.2s infinite linear}
-@keyframes run{0%{transform:translateY(-50%) rotate(-5deg) scaleY(0.95)}100%{transform:translateY(-60%) rotate(5deg) scaleY(1.05)}}
+.runner{position:absolute;left:20px;top:50%;font-size:44px;animation:run 0.6s infinite alternate,moveX 1.2s infinite linear}
+@keyframes run{0%{transform:translateY(-50%) rotate(-5deg)}100%{transform:translateY(-60%) rotate(5deg)}}
 @keyframes moveX{0%{left:20px}50%{left:160px}100%{left:20px}}
 .loadText{position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);background:#0a0614;color:#fff;padding:6px 14px;border-radius:100px;font-family:'Mochiy Pop One';font-size:11px;white-space:nowrap}
 #file{display:none}
+.sliderWrap{margin:0 12px 12px;background:#fef3ff;border:3px solid #0a0614;border-radius:18px;padding:14px;box-shadow:0 4px 0 #0a0614}
+input[type=range]{width:100%;accent-color:#ff6ec7;height:8px}
 </style>
 </head>
 <body>
 <div class="animeBg"></div>
-
 <div class="topbar">
-<div class="brand"><div class="logo">A</div>AETHER <span>ANIME ✨</span></div>
-<div class="actions">
-<button class="kawaiiBtn" onclick="openSearch()">🔍</button>
-<button class="hdBtn" onclick="downloadAll()">⬇ HD</button>
-</div>
+<div class="brand"><div class="logoA">A</div>AETHER ANIME ✨ BIG ICONS</div>
+<div style="display:flex;gap:8px"><button class="kBtn" onclick="openSearch()">🔍</button><button class="hdBtn" onclick="downloadAll()">⬇ HD</button></div>
 </div>
 
 <div class="searchModal" id="searchModal">
-<div class="searchBox"><span style="font-size:20px">🌸</span><input id="searchInput" placeholder="Search anime tools kawaii... bg remove, cartoon..." oninput="doSearch(this.value)"><button class="kawaiiBtn" style="width:36px;height:36px" onclick="closeSearch()">✕</button></div>
+<div class="searchBox"><span style="font-size:22px">🌸</span><input id="searchInput" placeholder="Search kawaii tools..." oninput="doSearch(this.value)"><button class="kBtn" style="width:36px;height:36px" onclick="closeSearch()">✕</button></div>
 <div class="resultList" id="resultList"></div>
 </div>
 
 <div class="hero">
 <img id="genImg"/><canvas id="canvas" width="900" height="900"></canvas>
-<div class="status"><div class="dot"></div><span id="st">🌸 Anime World • 120 Tools Ready!</span></div>
-
-<!-- ANIME RUNNING LOADING -->
-<div id="loader">
-<div style="position:relative">
-<div class="runTrack"><div class="runBg"></div><div class="runner">🏃‍♀️💨</div></div>
-<div class="loadText">✨ Anime Girl Running... Generating ✨</div>
-</div>
-</div>
+<div class="status"><span id="st">🌸 BIG Icons • Anime World!</span></div>
+<div id="loader"><div style="position:relative"><div class="runTrack"><div class="runBg"></div><div class="runner">🏃‍♀️💨</div></div><div class="loadText">✨ Anime Girl Running... ✨</div></div></div>
 </div>
 
 <div class="panel">
 <div class="handle"></div>
 
 <div id="tab-gen">
-<div class="label">✨ <i>What to create?</i> 🎨</div>
-<div class="promptWrap"><textarea id="prompt" placeholder="Kawaii Tamil anime girl cherry blossom, breakup sad boy rain anime style..."></textarea></div>
+<div class="label">✨ What to create? 🎨</div>
+<div class="promptWrap"><textarea id="prompt" placeholder="Kawaii anime girl, breakup sad boy rain anime..."></textarea></div>
 <div class="chips">
 <div class="chip pink" onclick="setP('Kawaii Tamil anime girl cherry blossom pink hair big eyes')">🌸 Kawaii Girl</div>
-<div class="chip yellow" onclick="setP('Tamil boy anime heartbreak rain night city neon sad')">💔 Breakup Anime</div>
-<div class="chip purple" onclick="setP('Lord Murugan anime divine super power aura fire')">🔥 Murugan Anime</div>
-<div class="chip" onclick="setP('Chibi Thala Dhoni CSK cute chibi stadium')">🏏 Chibi Dhoni</div>
-<div class="chip pink" onclick="setP('Anime couple love hug sunset beach kawaii')">💖 Love Anime</div>
+<div class="chip yellow" onclick="setP('Tamil boy anime heartbreak rain night city neon sad')">💔 Breakup</div>
+<div class="chip purple" onclick="setP('Lord Murugan anime divine power fire aura')">🔥 Murugan</div>
+<div class="chip" onclick="setP('Chibi Thala Dhoni CSK cute')">🏏 Chibi Dhoni</div>
 </div>
-
-<div class="label">🎨 <i>Anime Styles</i> - Colourful!</div>
+<div class="label">🎨 Anime Styles - BIG Icons!</div>
 <div class="styleScroller" id="styleRow">
-<div class="styleCard active" data-s="anime, kawaii, studio ghibli, ultra cute"><div class="ic" style="background:#ff6ec7">🎌</div><div class="nm">Kawaii</div></div>
-<div class="styleCard" data-s="anime, cyberpunk, neon city, blade runner"><div class="ic" style="background:#7dd3fc">🌃</div><div class="nm">Cyber</div></div>
-<div class="styleCard" data-s="shojo anime, sparkles, magical girl"><div class="ic" style="background:#fca5a5">💖</div><div class="nm">Shojo</div></div>
-<div class="styleCard" data-s="shonen anime, epic battle, fire aura"><div class="ic" style="background:#fdba74">🔥</div><div class="nm">Shonen</div></div>
-<div class="styleCard" data-s="chibi, cute, small, super deformed"><div class="ic" style="background:#ffde59">😍</div><div class="nm">Chibi</div></div>
-<div class="styleCard" data-s="anime, vintage 90s, sailor moon"><div class="ic" style="background:#c4b5fd">💿</div><div class="nm">90s Anime</div></div>
-<div class="styleCard" data-s="photorealistic anime, 8k"><div class="ic" style="background:#a7f3d0">📸</div><div class="nm">Real Anime</div></div>
+<div class="styleCard active" data-s="anime, kawaii, studio ghibli, ultra cute"><div class="styleIconBig" style="background:linear-gradient(135deg,#ff6ec7,#ff1493)">🎌</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Kawaii</div></div>
+<div class="styleCard" data-s="anime, cyberpunk, neon city"><div class="styleIconBig" style="background:linear-gradient(135deg,#7dd3fc,#0ea5e9)">🌃</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Cyber</div></div>
+<div class="styleCard" data-s="shojo anime, sparkles"><div class="styleIconBig" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">💖</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Shojo</div></div>
+<div class="styleCard" data-s="chibi, cute, small"><div class="styleIconBig" style="background:linear-gradient(135deg,#ffde59,#f59e0b)">😍</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Chibi</div></div>
+<div class="styleCard" data-s="shonen anime, epic battle"><div class="styleIconBig" style="background:linear-gradient(135deg,#fdba74,#ea580c)">🔥</div><div style="font-family:'Mochiy Pop One';font-size:10px;color:#000">Shonen</div></div>
 </div>
-<button class="generateBtn" onclick="genAI()">✨ GENERATE ANIME MAGIC ✨ 🚀</button>
+<button class="generateBtn" onclick="genAI()">✨ GENERATE ANIME MAGIC 🚀</button>
 </div>
 
 <div id="tab-ai" style="display:none">
-<div class="label">🤖 <i>AI Tools</i> - Kawaii Icons!</div>
+<div class="label">🤖 AI Tools - BIG 3D Icons!</div>
 <div class="toolGrid">
-<div class="tool" onclick="ai('bgremove')"><div class="ico">✂️</div><div class="t"><b>BG Cut</b><span>Background cut</span></div></div>
-<div class="tool" onclick="ai('bgblur')"><div class="ico">🌸</div><div class="t"><b>Bokeh</b><span>Blur background</span></div></div>
-<div class="tool" onclick="ai('enhance')"><div class="ico">💖</div><div class="t"><b>HD Kawaii</b><span>Make HD</span></div></div>
-<div class="tool" onclick="ai('upscale')"><div class="ico">🔍</div><div class="t"><b>Big Big</b><span>Upscale 2x</span></div></div>
-<div class="tool" onclick="ai('cartoon')"><div class="ico">🎭</div><div class="t"><b>Toon</b><span>Anime toon</span></div></div>
-<div class="tool" onclick="ai('anime')"><div class="ico">🎌</div><div class="t"><b>Anime AI</b><span>Manga style</span></div></div>
-<div class="tool" onclick="ai('smooth')"><div class="ico">✨</div><div class="t"><b>Smooth</b><span>Kawaii skin</span></div></div>
-<div class="tool" onclick="ai('colorize')"><div class="ico">🌈</div><div class="t"><b>Color Pop</b><span>Colourize</span></div></div>
+<div class="toolCard" onclick="ai('bgremove')"><div class="toolIcon" style="background:linear-gradient(135deg,#ff6ec7,#ff1493)">✂️</div><div class="toolText"><div class="toolName">BG Remove</div><div class="toolDesc">Cut background</div></div></div>
+<div class="toolCard" onclick="ai('bgblur')"><div class="toolIcon" style="background:linear-gradient(135deg,#7dd3fc,#0ea5e9)">🌸</div><div class="toolText"><div class="toolName">Bokeh Blur</div><div class="toolDesc">Blur BG magic</div></div></div>
+<div class="toolCard" onclick="ai('enhance')"><div class="toolIcon" style="background:linear-gradient(135deg,#ffde59,#f59e0b)">💖</div><div class="toolText"><div class="toolName">HD Kawaii</div><div class="toolDesc">Make 4K HD</div></div></div>
+<div class="toolCard" onclick="ai('upscale')"><div class="toolIcon" style="background:linear-gradient(135deg,#a7f3d0,#10b981)">🔍</div><div class="toolText"><div class="toolName">Upscale 2x</div><div class="toolDesc">Super res big</div></div></div>
+<div class="toolCard" onclick="ai('cartoon')"><div class="toolIcon" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">🎭</div><div class="toolText"><div class="toolName">Cartoon AI</div><div class="toolDesc">Toon filter</div></div></div>
+<div class="toolCard" onclick="ai('anime')"><div class="toolIcon" style="background:linear-gradient(135deg,#c4b5fd,#8b5cf6)">🎌</div><div class="toolText"><div class="toolName">Anime AI</div><div class="toolDesc">Manga style</div></div></div>
+<div class="toolCard" onclick="ai('smooth')"><div class="toolIcon" style="background:linear-gradient(135deg,#fdba74,#f97316)">✨</div><div class="toolText"><div class="toolName">Smooth Skin</div><div class="toolDesc">Kawaii skin</div></div></div>
+<div class="toolCard" onclick="ai('colorize')"><div class="toolIcon" style="background:linear-gradient(135deg,#86efac,#22c55e)">🌈</div><div class="toolText"><div class="toolName">Color Pop</div><div class="toolDesc">B&W to color</div></div></div>
 </div>
 </div>
 
-<div id="tab-adjust" style="display:none">
-<div class="label">⚙️ <i>Adjust</i> - Colourful Sliders!</div>
-<div id="sliders"></div>
-</div>
+<div id="tab-adjust" style="display:none"><div class="label">⚙️ Adjust</div><div id="sliders"></div></div>
 
 <div id="tab-filter" style="display:none">
-<div class="label">🌈 <i>Filters</i> - Anime Filters!</div>
+<div class="label">🌈 Filters - BIG Icons!</div>
 <div class="toolGrid" id="fGrid"></div>
 </div>
 
 <div id="tab-more" style="display:none">
-<div class="label">💥 <i>More Magic</i></div>
+<div class="label">💥 More Magic - BIG Icons!</div>
 <div class="toolGrid">
-<div class="tool" onclick="applyF('glitch')"><div class="ico" style="background:#ff6ec7">💥</div><div class="t"><b>Glitch</b><span>Cyber error</span></div></div>
-<div class="tool" onclick="applyF('neon')"><div class="ico" style="background:#ffde59">💡</div><div class="t"><b>Neon</b><span>Glow glow</span></div></div>
-<div class="tool" onclick="applyF('sakura')"><div class="ico" style="background:#fca5a5">🌸</div><div class="t"><b>Sakura</b><span>Pink bloom</span></div></div>
-<div class="tool" onclick="applyF('fire')"><div class="ico" style="background:#fdba74">🔥</div><div class="t"><b>Fire Aura</b><span>Power up</span></div></div>
-<div class="tool" onclick="basic('rotate90')"><div class="ico" style="background:#7dd3fc">↻</div><div class="t"><b>Rotate</b><span>Kuru kuru</span></div></div>
-<div class="tool" onclick="basic('fliph')"><div class="ico" style="background:#c4b5fd">↔</div><div class="t"><b>Flip</b><span>Mirror</span></div></div>
-<div class="tool" onclick="addText()"><div class="ico" style="background:#a7f3d0">✏️</div><div class="t"><b>Kawaii Text</b><span>Add text</span></div></div>
-<div class="tool" onclick="toggleDraw()"><div class="ico" style="background:#ffde59">🎨</div><div class="t"><b>Oekaki</b><span>Draw</span></div></div>
+<div class="toolCard" onclick="applyF('glitch')"><div class="toolIcon" style="background:linear-gradient(135deg,#ff6ec7,#ec4899)">💥</div><div class="toolText"><div class="toolName">Glitch</div><div class="toolDesc">Cyber error</div></div></div>
+<div class="toolCard" onclick="applyF('neon')"><div class="toolIcon" style="background:linear-gradient(135deg,#ffde59,#eab308)">💡</div><div class="toolText"><div class="toolName">Neon Glow</div><div class="toolDesc">Bright glow</div></div></div>
+<div class="toolCard" onclick="applyF('sakura')"><div class="toolIcon" style="background:linear-gradient(135deg,#fbcfe8,#f472b6)">🌸</div><div class="toolText"><div class="toolName">Sakura</div><div class="toolDesc">Pink bloom</div></div></div>
+<div class="toolCard" onclick="applyF('fire')"><div class="toolIcon" style="background:linear-gradient(135deg,#fed7aa,#f97316)">🔥</div><div class="toolText"><div class="toolName">Fire Aura</div><div class="toolDesc">Power up!</div></div></div>
+<div class="toolCard" onclick="basic('rotate90')"><div class="toolIcon" style="background:linear-gradient(135deg,#bfdbfe,#3b82f6)">↻</div><div class="toolText"><div class="toolName">Rotate</div><div class="toolDesc">Turn 90°</div></div></div>
+<div class="toolCard" onclick="basic('fliph')"><div class="toolIcon" style="background:linear-gradient(135deg,#ddd6fe,#7c3aed)">↔</div><div class="toolText"><div class="toolName">Flip H</div><div class="toolDesc">Mirror flip</div></div></div>
+<div class="toolCard" onclick="addText()"><div class="toolIcon" style="background:linear-gradient(135deg,#a7f3d0,#059669)">✏️</div><div class="toolText"><div class="toolName">Kawaii Text</div><div class="toolDesc">Add text</div></div></div>
+<div class="toolCard" onclick="toggleDraw()"><div class="toolIcon" style="background:linear-gradient(135deg,#fde68a,#d97706)">🎨</div><div class="toolText"><div class="toolName">Oekaki Draw</div><div class="toolDesc">Brush draw</div></div></div>
 </div>
-<div class="label">📝 <i>Kawaii Text</i></div>
-<div class="promptWrap"><textarea id="txt" style="height:44px" placeholder="HARI ❤️, KAWAII, SENPAI..."></textarea></div>
+<div class="label">📝 Kawaii Text</div>
+<div class="promptWrap"><textarea id="txt" style="height:44px" placeholder="HARI ❤️, KAWAII..."></textarea></div>
 </div>
 </div>
 
 <div class="bottom">
-<div class="bItem active" onclick="switchTab('gen',this)"><div class="bi">🎨</div><div class="bt">GEN</div></div>
-<div class="bItem" onclick="switchTab('ai',this)"><div class="bi">🤖</div><div class="bt">AI 8</div></div>
-<div class="bItem" onclick="switchTab('adjust',this)"><div class="bi">⚙️</div><div class="bt">ADJUST</div></div>
-<div class="bItem" onclick="switchTab('filter',this)"><div class="bi">🌈</div><div class="bt">FILTER 14</div></div>
-<div class="bItem" onclick="switchTab('more',this)"><div class="bi">💥</div><div class="bt">MORE 8</div></div>
+<div class="bItem active" onclick="switchTab('gen',this)"><div style="font-size:22px">🎨</div><div class="bt">GEN</div></div>
+<div class="bItem" onclick="switchTab('ai',this)"><div style="font-size:22px">🤖</div><div class="bt">AI 8</div></div>
+<div class="bItem" onclick="switchTab('adjust',this)"><div style="font-size:22px">⚙️</div><div class="bt">ADJUST</div></div>
+<div class="bItem" onclick="switchTab('filter',this)"><div style="font-size:22px">🌈</div><div class="bt">FILTER 14</div></div>
+<div class="bItem" onclick="switchTab('more',this)"><div style="font-size:22px">💥</div><div class="bt">MORE 8</div></div>
 </div>
 
 <input type="file" id="file" accept="image/*">
@@ -186,32 +157,32 @@ const canvas=document.getElementById('canvas'), ctx=canvas.getContext('2d');
 let img=null, rot=0, fh=1, fv=1, curF='none', selS='anime, kawaii, studio ghibli, ultra cute', selSz='1024x1024', drawOn=false, drawing=false, lx, ly;
 const sliders=[['bri','☀️ Brightness',100,0,200],['con','◐ Contrast',100,0,200],['sat','🌈 Saturation',100,0,200],['blur','🌸 Blur',0,0,10],['hue','🎨 Hue',0,0,360]];
 const filters=[
- ['none','Original','⚪'],['grayscale','Mono','⚫'],['sepia','Sepia','🟤'],['vintage','Vintage','📼'],
- ['cyber','Cyber','🌃'],['sakura','Sakura','🌸'],['warm','Warm','🔥'],['cold','Cold','❄️'],
- ['cartoon','Toon','🎭'],['bwpro','Mono Pro','⬛'],['kawaii','Kawaii','💖'],['glitch','Glitch','💥'],
- ['neon','Neon','💡'],['hdr','HDR','☀️']
+ ['none','Original','⚪','#fff'],['grayscale','Mono','⚫','#000'],['sepia','Sepia','🟤','#92400e'],['vintage','Vintage','📼','#a855f7'],
+ ['cyber','Cyber','🌃','#0ea5e9'],['sakura','Sakura','🌸','#ec4899'],['warm','Warm','🔥','#f97316'],['cold','Cold','❄️','#06b6d4'],
+ ['cartoon','Toon','🎭','#ef4444'],['bwpro','Mono Pro','⬛','#111'],['kawaii','Kawaii','💖','#ff6ec7'],['glitch','Glitch','💥','#ff1493'],['neon','Neon','💡','#eab308'],['hdr','HDR','☀️','#f59e0b']
 ];
 const allTools=[
- {k:'bgremove',n:'BG Cut',d:'Background cut',i:'✂️',a:()=>ai('bgremove')},
- {k:'bokeh',n:'Bokeh Blur',d:'Anime blur',i:'🌸',a:()=>ai('bgblur')},
- {k:'kawaii',n:'HD Kawaii',d:'Make HD cute',i:'💖',a:()=>ai('enhance')},
- {k:'upscale',n:'Big Big',d:'Upscale',i:'🔍',a:()=>ai('upscale')},
- {k:'cartoon',n:'Toon',d:'Anime toon',i:'🎭',a:()=>ai('cartoon')},
+ {k:'bgremove',n:'BG Remove',d:'Cut background',i:'✂️',a:()=>ai('bgremove')},
+ {k:'bokeh',n:'Bokeh Blur',d:'Blur background',i:'🌸',a:()=>ai('bgblur')},
+ {k:'kawaii',n:'HD Kawaii',d:'Make 4K HD',i:'💖',a:()=>ai('enhance')},
+ {k:'upscale',n:'Upscale 2x',d:'Super res',i:'🔍',a:()=>ai('upscale')},
+ {k:'cartoon',n:'Cartoon AI',d:'Toon filter',i:'🎭',a:()=>ai('cartoon')},
  {k:'sakura',n:'Sakura',d:'Pink bloom',i:'🌸',a:()=>applyF('sakura')},
- {k:'glitch',n:'Glitch',d:'Cyber',i:'💥',a:()=>applyF('glitch')},
- {k:'neon',n:'Neon Glow',d:'Glow',i:'💡',a:()=>applyF('neon')},
+ {k:'glitch',n:'Glitch',d:'Cyber error',i:'💥',a:()=>applyF('glitch')},
+ {k:'neon',n:'Neon Glow',d:'Bright glow',i:'💡',a:()=>applyF('neon')},
  {k:'text',n:'Kawaii Text',d:'Add text',i:'✏️',a:()=>addText()},
- {k:'draw',n:'Oekaki Draw',d:'Draw',i:'🎨',a:()=>toggleDraw()},
+ {k:'draw',n:'Oekaki Draw',d:'Brush draw',i:'🎨',a:()=>toggleDraw()},
 ];
-
 function init(){
  const s=document.getElementById('sliders');
- sliders.forEach(([id,n,def,min,max])=>{ s.innerHTML+=`<div class="sliderWrap"><div class="row"><span>${n}</span><span id="v${id}">${def}</span></div><input type="range" id="${id}" min="${min}" max="${max}" value="${def}" oninput="apply()"></div>`; });
+ sliders.forEach(([id,n,def,min,max])=>{ s.innerHTML+=`<div class="sliderWrap"><div style="display:flex;justify-content:space-between;font-family:Mochiy Pop One;font-size:10px;color:#0a0614;margin-bottom:8px"><span>${n}</span><span id="v${id}">${def}</span></div><input type="range" id="${id}" min="${min}" max="${max}" value="${def}" oninput="apply()"></div>`; });
  const f=document.getElementById('fGrid');
- filters.forEach(([id,n,ic])=>{ const col=['#ff6ec7','#ffde59','#7dd3fc','#a7f3d0','#fca5a5','#c4b5fd'][Math.floor(Math.random()*6)]; f.innerHTML+=`<div class="tool" onclick="applyF('${id}')"><div class="ico" style="background:${col}">${ic}</div><div class="t"><b>${n}</b><span>Filter</span></div></div>`; });
+ filters.forEach(([id,n,ic,c])=>{
+   const grad=`linear-gradient(135deg, ${c}, ${c}dd)`;
+   f.innerHTML+=`<div class="toolCard" onclick="applyF('${id}')"><div class="toolIcon" style="background:${grad}">${ic}</div><div class="toolText"><div class="toolName">${n}</div><div class="toolDesc">${id} filter</div></div></div>`;
+ });
 }
 init();
-
 function openSearch(){ document.getElementById('searchModal').style.display='block'; document.getElementById('searchInput').focus(); doSearch(''); }
 function closeSearch(){ document.getElementById('searchModal').style.display='none'; }
 function doSearch(q){
@@ -220,12 +191,11 @@ function doSearch(q){
  const results=query===''? allTools : allTools.filter(t=> t.k.includes(query) || t.n.toLowerCase().includes(query));
  results.forEach(t=>{
    const div=document.createElement('div'); div.className='resItem';
-   div.innerHTML=`<div class="ico" style="width:44px;height:44px;background:#ffde59;border:2px solid #0a0614;border-radius:14px;display:grid;place-items:center;font-size:22px">${t.i}</div><div class="t"><b style="font-family:Mochiy Pop One;font-weight:400;font-size:11px;color:#0a0614">${t.n}</b><br><span style="color:#7c5a8a;font-size:10px;font-weight:700">${t.d}</span></div>`;
+   div.innerHTML=`<div class="toolIcon" style="width:56px;height:56px;background:linear-gradient(135deg,#ffde59,#f59e0b);border:3px solid #000;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px">${t.i}</div><div class="toolText"><div class="toolName">${t.n}</div><div class="toolDesc">${t.d}</div></div>`;
    div.onclick=()=>{ closeSearch(); t.a(); };
    list.appendChild(div);
  });
 }
-
 document.getElementById('file').addEventListener('change', e=>{
  const fl=e.target.files[0]; if(!fl) return;
  const r=new FileReader(); r.onload=ev=>{
@@ -238,21 +208,21 @@ function gv(id){ return document.getElementById(id)?.value||0; }
 function applyF(id){ curF=id; apply(); st('Filter: '+id+' 🌸 Applied!'); }
 function resetS(){ sliders.forEach(([id,_,def])=>{ const el=document.getElementById(id); if(el) el.value=def; }); }
 function basic(t){ if(t==='rotate90') rot+=90; if(t==='fliph') fh*=-1; if(t==='flipv') fv*=-1; draw(); st(t+' Done! ✨'); }
-function ai(t){ if(t==='bgremove'){ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.drawImage(canvas,0,0); const d=tc.getImageData(0,0,tmp.width,tmp.height); for(let i=0;i<d.data.length;i+=4){ if(d.data[i]>225&&d.data[i+1]>225&&d.data[i+2]>225) d.data[i+3]=0; } ctx.clearRect(0,0,canvas.width,canvas.height); ctx.putImageData(d,0,0); } if(t==='bgblur'){ document.getElementById('blur').value=6; apply(); } if(t==='enhance'){ document.getElementById('bri').value=110; document.getElementById('con').value=125; document.getElementById('sat').value=130; apply(); } if(t==='upscale'){ canvas.width*=2; canvas.height*=2; draw(); } if(t==='cartoon') applyF('cartoon'); if(t==='anime') applyF('kawaii'); if(t==='smooth'){ document.getElementById('blur').value=1; document.getElementById('bri').value=108; apply(); } st('AI '+t+' Kawaii Done! 💖'); }
+function ai(t){ if(t==='bgremove'){ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.drawImage(canvas,0,0); const d=tc.getImageData(0,0,tmp.width,tmp.height); for(let i=0;i<d.data.length;i+=4){ if(d.data[i]>225&&d.data[i+1]>225&&d.data[i+2]>225) d.data[i+3]=0; } ctx.clearRect(0,0,canvas.width,canvas.height); ctx.putImageData(d,0,0); } if(t==='bgblur'){ document.getElementById('blur').value=6; apply(); } if(t==='enhance'){ document.getElementById('bri').value=110; document.getElementById('con').value=125; document.getElementById('sat').value=130; apply(); } if(t==='upscale'){ canvas.width*=2; canvas.height*=2; draw(); } if(t==='cartoon') applyF('cartoon'); if(t==='anime') applyF('kawaii'); if(t==='smooth'){ document.getElementById('blur').value=1; document.getElementById('bri').value=108; apply(); } st('AI '+t+' Done! 💖'); }
 function switchTab(id,el){ document.querySelectorAll('.bItem').forEach(b=>b.classList.remove('active')); el.classList.add('active'); ['gen','ai','adjust','filter','more'].forEach(k=>{ const e=document.getElementById('tab-'+k); if(e) e.style.display=k===id?'block':'none'; }); }
 function st(t){ document.getElementById('st').innerText=t; }
 function setP(t){ document.getElementById('prompt').value=t; }
 document.querySelectorAll('.styleCard').forEach(b=>b.addEventListener('click',()=>{ if(!b.dataset.s) return; document.getElementById('styleRow').querySelectorAll('.styleCard').forEach(x=>x.classList.remove('active')); b.classList.add('active'); selS=b.dataset.s; }));
-async function genAI(){ const p=document.getElementById('prompt').value.trim(); if(!p){ alert('Prompt type pannu da! Kawaii prompt!'); return; } document.getElementById('loader').style.display='grid'; st('🏃‍♀️ Anime Girl Running...'); const full=encodeURIComponent(p+', '+selS+', kawaii, ultra detailed, anime key visual'); const seed=Math.floor(Math.random()*999999); const [w,h]=selSz.split('x'); const url=`https://image.pollinations.ai/p/${full}?width=${w}&height=${h}&seed=${seed}&nologo=true`; const gi=document.getElementById('genImg'); gi.onload=()=>{ document.getElementById('loader').style.display='none'; gi.style.display='block'; canvas.style.display='none'; const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; draw(); }; im.src=url; st('✨ Generated! Sugoi! ✨'); }; gi.onerror=()=>{ document.getElementById('loader').style.display='none'; st('Try again Senpai!'); }; gi.src=url; canvas.style.display='none'; }
-function addText(){ const t=document.getElementById('txt').value; if(!t){ alert('Kawaii text type pannu da!'); return; } if(!img){ alert('Photo venum Senpai!'); return; } ctx.save(); ctx.font='900 64px Mochiy Pop One'; ctx.fillStyle='#fff'; ctx.strokeStyle='#0a0614'; ctx.lineWidth=8; ctx.translate(canvas.width/2,canvas.height/2); ctx.rotate(rot*Math.PI/180); ctx.strokeText(t,-120,0); ctx.fillText(t,-120,0); ctx.restore(); st('Kawaii Text Added! 💖'); }
-function toggleDraw(){ drawOn=!drawOn; st(drawOn?'🎨 Oekaki ON! Draw!':'Oekaki OFF'); }
+async function genAI(){ const p=document.getElementById('prompt').value.trim(); if(!p){ alert('Prompt type pannu da!'); return; } document.getElementById('loader').style.display='grid'; st('🏃‍♀️ Anime Girl Running...'); const full=encodeURIComponent(p+', '+selS+', kawaii, ultra detailed, anime key visual'); const seed=Math.floor(Math.random()*999999); const [w,h]=selSz.split('x'); const url=`https://image.pollinations.ai/p/${full}?width=${w}&height=${h}&seed=${seed}&nologo=true`; const gi=document.getElementById('genImg'); gi.onload=()=>{ document.getElementById('loader').style.display='none'; gi.style.display='block'; canvas.style.display='none'; const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>{ img=im; canvas.width=im.width; canvas.height=im.height; draw(); }; im.src=url; st('✨ Generated! Sugoi! ✨'); }; gi.onerror=()=>{ document.getElementById('loader').style.display='none'; st('Try again Senpai!'); }; gi.src=url; canvas.style.display='none'; }
+function addText(){ const t=document.getElementById('txt').value; if(!t){ alert('Text type pannu da!'); return; } if(!img){ alert('Photo venum!'); return; } ctx.save(); ctx.font='900 64px Mochiy Pop One'; ctx.fillStyle='#fff'; ctx.strokeStyle='#0a0614'; ctx.lineWidth=8; ctx.translate(canvas.width/2,canvas.height/2); ctx.rotate(rot*Math.PI/180); ctx.strokeText(t,-120,0); ctx.fillText(t,-120,0); ctx.restore(); st('Text Added! 💖'); }
+function toggleDraw(){ drawOn=!drawOn; st(drawOn?'🎨 Oekaki ON!':'Oekaki OFF'); }
 canvas.addEventListener('touchstart', e=>{ if(!drawOn) return; const r=canvas.getBoundingClientRect(); const t=e.touches[0]; lx=(t.clientX-r.left)*(canvas.width/r.width); ly=(t.clientY-r.top)*(canvas.height/r.height); drawing=true; });
-canvas.addEventListener('touchmove', e=>{ if(!drawing||!drawOn) return; e.preventDefault(); const r=canvas.getBoundingClientRect(); const t=e.touches[0]; const x=(t.clientX-r.left)*(canvas.width/r.width), y=(t.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#ff6ec7'; ctx.lineWidth=12; ctx.lineCap='round'; ctx.stroke(); lx=x; ly=y; },{passive:false});
+canvas.addEventListener('touchmove', e=>{ if(!drawing||!drawOn) return; e.preventDefault(); const r=canvas.getBoundingClientRect(); const t=e.touches[0]; const x=(t.clientX-r.left)*(canvas.width/r.width), y=(t.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#ff6ec7'; ctx.lineWidth=14; ctx.lineCap='round'; ctx.stroke(); lx=x; ly=y; },{passive:false});
 canvas.addEventListener('touchend', ()=>drawing=false);
 canvas.addEventListener('mousedown', e=>{ if(!drawOn) return; const r=canvas.getBoundingClientRect(); lx=(e.clientX-r.left)*(canvas.width/r.width); ly=(e.clientY-r.top)*(canvas.height/r.height); drawing=true; });
-canvas.addEventListener('mousemove', e=>{ if(!drawing||!drawOn) return; const r=canvas.getBoundingClientRect(); const x=(e.clientX-r.left)*(canvas.width/r.width), y=(e.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#ff6ec7'; ctx.lineWidth=12; ctx.lineCap='round'; ctx.stroke(); lx=x; ly=y; });
+canvas.addEventListener('mousemove', e=>{ if(!drawing||!drawOn) return; const r=canvas.getBoundingClientRect(); const x=(e.clientX-r.left)*(canvas.width/r.width), y=(e.clientY-r.top)*(canvas.height/r.height); ctx.beginPath(); ctx.moveTo(lx,ly); ctx.lineTo(x,y); ctx.strokeStyle='#ff6ec7'; ctx.lineWidth=14; ctx.lineCap='round'; ctx.stroke(); lx=x; ly=y; });
 canvas.addEventListener('mouseup', ()=>drawing=false);
-function downloadAll(){ const isImg=document.getElementById('genImg').style.display==='block'; let url; if(isImg) url=document.getElementById('genImg').src; else{ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.filter=canvas.style.filter; tc.drawImage(canvas,0,0); url=tmp.toDataURL('image/png'); } const a=document.createElement('a'); a.download='Anime-Aether-'+Date.now()+'.png'; a.href=url; a.click(); st('HD Downloaded Sugoi! ✨'); }
+function downloadAll(){ const isImg=document.getElementById('genImg').style.display==='block'; let url; if(isImg) url=document.getElementById('genImg').src; else{ const tmp=document.createElement('canvas'); tmp.width=canvas.width; tmp.height=canvas.height; const tc=tmp.getContext('2d'); tc.filter=canvas.style.filter; tc.drawImage(canvas,0,0); url=tmp.toDataURL('image/png'); } const a=document.createElement('a'); a.download='Anime-BIG-'+Date.now()+'.png'; a.href=url; a.click(); st('HD Downloaded! ✨'); }
 </script>
 </body>
 </html>
