@@ -1,67 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aether AI PRO - Premium AI Tools</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-.glass { backdrop-filter: blur(16px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
-.neon { box-shadow: 0 0 20px rgba(168,85,247,0.4); }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="monetag" content="885decdd14aefd3c726f3b189e29c0bf">
+  <title>Aether AI - PRO</title>
+  <meta name="description" content="Aether AI PRO - Your AI Assistant">
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#0a0a0a; color:white; display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column; }
+    h1 { font-size:3rem; background: linear-gradient(90deg,#8a2be2,#00ffff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    p { color:#888; }
+    .btn { margin-top:20px; padding:12px 24px; background:white; color:black; border-radius:8px; text-decoration:none; font-weight:bold; }
+  </style>
 </head>
-<body class="bg-[#0a0a0f] text-white min-h-screen p-4">
-<!-- NAV -->
-<nav class="glass rounded-2xl p-4 flex justify-between items-center mb-6">
-<div class="font-bold text-xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">◆ Aether AI PRO</div>
-<div class="flex gap-2"><button class="glass px-4 py-2 rounded-full text-sm">Create</button><button class="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full text-sm neon">Generate</button></div>
-</nav>
+<body>
+  <h1>Aether AI</h1>
+  <p>Your AI Assistant is Live - PRO Version</p>
+  <a class="btn" href="#">Get Started</a>
 
-<!-- AD SLOT 1 - TOP (Paste Monetag code here) -->
-<div class="w-full bg-black/30 rounded-xl p-2 mb-4 text-center text-xs text-gray-500">
-<!-- AD 1 HERE - Monetag code paste pannu -->
-[AD SPACE 1 - Top Banner]
-</div>
-
-<!-- MAIN -->
-<div class="grid md:grid-cols-4 gap-6">
-<div class="glass rounded-2xl p-4">
-<h3 class="text-cyan-400 text-sm mb-4">AI TOOLS</h3>
-<button onclick="setTool('ghibli')" class="w-full text-left glass rounded-xl p-3 mb-2 border-cyan-400/50">✨ Ghibli Style 🔥</button>
-<button onclick="setTool('bg')" class="w-full text-left glass rounded-xl p-3 mb-2">✂️ Background Remover</button>
-<button onclick="setTool('face')" class="w-full text-left glass rounded-xl p-3 mb-2">👥 Face Swap</button>
-<button onclick="setTool('enhance')" class="w-full text-left glass rounded-xl p-3">💎 Photo Enhancer</button>
-</div>
-
-<div class="md:col-span-3 glass rounded-2xl p-6">
-<h1 class="text-4xl font-bold bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent mb-2">Generate anything with AI</h1>
-<input id="prompt" placeholder="Describe your image... e.g., cozy ghibli cafe" class="w-full bg-black/50 rounded-xl p-4 mt-4 border border-white/10">
-<button onclick="generate()" class="mt-4 w-full bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-xl font-bold neon">★ Generate [2 Ads + Image]</button>
-
-<!-- AD SLOT 2 - MIDDLE -->
-<div class="mt-6 w-full bg-black/30 rounded-xl p-2 text-center text-xs text-gray-500">
-<!-- AD 2 HERE -->
-[AD SPACE 2 - Middle Banner]
-</div>
-
-<img id="result" class="mt-6 w-full rounded-2xl hidden">
-</div>
-</div>
-
-<script>
-let currentTool='ghibli';
-function setTool(t){currentTool=t; document.getElementById('prompt').placeholder=t+' prompt type pannu...'}
-function generate(){
-  let p=document.getElementById('prompt').value;
-  if(!p) return alert('Prompt type pannu da!');
-  // Show Ads (Simulate)
-  console.log('Showing AD 1 & AD 2 - Earning $$$');
-  // Generate Image FREE
-  let style = currentTool=='ghibli' ? 'ghibli studio style' : '';
-  let url=`https://image.pollinations.ai/prompt/${encodeURIComponent(p+' '+style)}?width=1024&height=768&nologo=true&seed=${Date.now()}`;
-  let img=document.getElementById('result');
-  img.src=url; img.classList.remove('hidden');
-}
-</script>
+  <!-- Monetag will add ads here later -->
 </body>
 </html>
