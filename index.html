@@ -1,20 +1,33 @@
-const animes=[
-{t:"Demon Slayer",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/1286/99889.jpg",yt:"https://www.youtube.com/embed/VQGCKyvzIM4",ott:"https://www.jiohotstar.com/search?q=Demon%20Slayer%20Tamil"},
-{t:"Jujutsu Kaisen S1 & S2",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/1792/138022.jpg",yt:"https://www.youtube.com/embed/pkKu9hLT-t8",ott:"https://www.jiohotstar.com/search?q=Jujutsu%20Kaisen%20Tamil"},
-{t:"Naruto Shippuden",y:"Tamil Dub • 500 Ep",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/5/17407.jpg",yt:"https://www.youtube.com/embed/QczGoCmX-pI",ott:"https://www.crunchyroll.com/search?q=Naruto%20Tamil"},
-{t:"One Piece Egghead",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/6/73245.jpg",yt:"https://www.youtube.com/embed/S8_YwFLCh4U",ott:"https://www.crunchyroll.com/search?q=One%20Piece%20Tamil"},
-{t:"Attack on Titan Full",y:"Tamil Dub • S1-S4 Final",cat:"tamil popular",img:"https://cdn.myanimelist.net/images/anime/10/47347.jpg",yt:"https://www.youtube.com/embed/MGRm4IzK1SQ",ott:"https://www.crunchyroll.com/search?q=Attack%20on%20Titan%20Tamil"},
-{t:"My Hero Academia S1-8",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/10/78745.jpg",yt:"https://www.youtube.com/embed/D2kyhD1Gry4",ott:"https://www.jiohotstar.com/search?q=My%20Hero%20Academia%20Tamil"},
-{t:"Haikyu All Seasons",y:"Tamil Dub • JioHotstar",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/7/76014.jpg",yt:"https://www.youtube.com/embed/6X8kZCzF3zI",ott:"https://www.jiohotstar.com/search?q=Haikyu%20Tamil"},
-{t:"Death Note",y:"Tamil Dub • Crunchyroll",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/9/9453.jpg",yt:"https://www.youtube.com/embed/NlJZ-YgAt-c",ott:"https://www.crunchyroll.com/search?q=Death%20Note%20Tamil"},
-{t:"Solo Leveling",y:"Tamil Dub • 2025 Hit",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/1925/140553.jpg",yt:"https://www.youtube.com/embed/c4LLv5o0JcA",ott:"https://www.crunchyroll.com/search?q=Solo%20Leveling%20Tamil"},
-{t:"Blue Lock S1 & S2",y:"Tamil Dub • Crunchyroll",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/3/102320.jpg",yt:"https://www.youtube.com/embed/o2rY9H0h2YQ",ott:"https://www.crunchyroll.com/search?q=Blue%20Lock%20Tamil"},
-{t:"One Punch Man S3",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/12/76049.jpg",yt:"https://www.youtube.com/embed/2JAElThbKrM",ott:"https://www.crunchyroll.com/search?q=One%20Punch%20Man%20Tamil"},
-{t:"Dr Stone Final",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/3/85639.jpg",yt:"https://www.youtube.com/embed/5i4vY9X0Z0I",ott:"https://www.crunchyroll.com/search?q=Dr%20Stone%20Tamil"},
-{t:"Fire Force Final",y:"Tamil Dub • 2026",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/5/87048.jpg",yt:"https://www.youtube.com/embed/MJv6N8Zf0Q0",ott:"https://www.crunchyroll.com/search?q=Fire%20Force%20Tamil"},
-{t:"Frieren S2",y:"Tamil Dub • 2026",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/1015/138006.jpg",yt:"https://www.youtube.com/embed/Iwr1aLEDpe4",ott:"https://www.crunchyroll.com/search?q=Frieren%20Tamil"},
-{t:"Black Clover",y:"Tamil Dub",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/2/88336.jpg",yt:"https://www.youtube.com/embed/x6Y1T2vZCTI",ott:"https://www.crunchyroll.com/search?q=Black%20Clover%20Tamil"},
-{t:"Bleach",y:"Tamil Dub",cat:"tamil",img:"https://cdn.myanimelist.net/images/anime/3/40451.jpg",yt:"https://www.youtube.com/embed/78WIYzX_m98",ott:"https://www.crunchyroll.com/search?q=Bleach%20Tamil"},
-{t:"Kaiju No 8",y:"Tamil Dub • 2025",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/4/138005.jpg",yt:"https://www.youtube.com/embed/6B9X0I0Z0I0",ott:"https://www.crunchyroll.com/search?q=Kaiju%20No%208%20Tamil"},
-{t:"Dandadan",y:"Tamil Dub • 2025 Hit",cat:"tamil new",img:"https://cdn.myanimelist.net/images/anime/3/147731.jpg",yt:"https://www.youtube.com/embed/a4s2N5I0Z0I",ott:"https://www.crunchyroll.com/search?q=Dandadan%20Tamil"},
-];
+// PASTE THIS IN YOUR OLD WEB - 3 LINES ONLY!
+const FREE=6, PER_AD=2, MAX_ADS=5;
+
+function getOld(){
+  const d=new Date().toDateString();
+  return {
+    used: parseInt(localStorage.getItem(`use_${d}`)||"0"),
+    adC: parseInt(localStorage.getItem(`adC_${d}`)||"0"),
+    adW: parseInt(localStorage.getItem(`adW_${d}`)||"0"),
+    total: function(){return FREE+this.adC},
+    d
+  };
+}
+
+// UN OLD GENERATE FUNCTION LA FIRST LINE LA ITHA ADD PANNU:
+function yourOldGenerateFunction(prompt){
+  const u=getOld();
+  if(u.used >= u.total()){
+    if(u.adW >= MAX_ADS){ alert("16/16 over da! Naalaiku va!"); return; }
+    if(confirm(`Limit over! Ad paathu +2 venuma? ${u.used}/${u.total()}`)){
+      watchAdOld();
+    }
+    return;
+  }
+  // UN OLD CODE CONTINUE...
+  localStorage.setItem(`use_${u.d}`, u.used+1);
+  // ... image generate ...
+}
+
+function watchAdOld(){
+  // Same ad box code naan kudutha
+  alert("Ad logic - Mela kudutha watchAd() function ah copy pannu da!");
+}
